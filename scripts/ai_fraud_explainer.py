@@ -4,7 +4,7 @@ import requests
 import subprocess
 import json
 
-def process_unexplained_fraud(limit=5):
+def process_unexplained_fraud():
     """Finds fraud cases without explanations and processes them in a batch."""
     con = duckdb.connect('data/warehouse/argus_vault.db')
     
@@ -19,11 +19,11 @@ def process_unexplained_fraud(limit=5):
         LEFT JOIN sat_txn_ai_insights a ON s.txn_hash_key = a.txn_hash_key
         WHERE s.is_fraud_label = 1 
           AND a.ai_reason_for_flag IS NULL
-        LIMIT ?
+        
     """
     
     try:
-        unexplained_cases = con.execute(query, [limit]).fetchall()
+        unexplained_cases = con.execute(query).fetchall()
     except Exception as e:
         print(f"❌ Database Error: {e}")
         return
@@ -66,4 +66,4 @@ def process_unexplained_fraud(limit=5):
 
 if __name__ == "__main__":
     # You can increase this limit once you verify the first few work!
-    process_unexplained_fraud(limit=3)
+    process_unexplained_fraud()
