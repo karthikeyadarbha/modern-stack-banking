@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: gold_fraud_analysis
+    description: "The final governed view for fraud detection, joining transaction identity with PCA features."
+    columns:
+      - name: txn_id
+        description: "The original business key for the transaction."
+        tests:
+          - unique
+          - not_null
+
+      - name: is_fraud_label
+        description: "Binary label (0 or 1) indicating if the transaction was flagged as fraud."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]
+
+      - name: amount
+        description: "The transaction value."
+        tests:
+          - not_null

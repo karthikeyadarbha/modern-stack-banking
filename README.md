@@ -2,37 +2,65 @@
 
 Argus-Lakehouse is a proof-of-concept (PoC) for a Secure, Hybrid Data Lakehouse designed for the banking sector. It solves the "Data Gravity" problem by decoupling compute from storage using Apache Iceberg, allowing seamless interoperability between Databricks (Engineering), Snowflake (Serving), and DuckDB (Local Development).
 
-It features a Unity Catalog-inspired governance model where PII (Credit Card Numbers) is masked at the storage level, ensuring compliance across all compute engines.
+# 🏦 Modern Stack Banking: Governed Fraud Detection
+**An End-to-End Data Vault 2.0 & AI-Inference Framework**
 
-🏗️ Architecture
-The pipeline follows a Medallion Architecture with a Data Vault modeling technique in the Silver layer.
+This repository demonstrates a production-grade data architecture designed for financial institutions. It bridges the gap between high-performance feature engineering (**Spark/Iceberg**) and regulatory-grade explainability (**dbt/DuckDB/Llama3**).
 
-🛠️ Getting Started (Local / Codespaces)
-This project is containerized. You do not need a Databricks cluster to run the development loop.
+---
 
-Prerequisites :
-    Docker Desktop (if running locally)
-    GitHub Codespaces (Recommended: 4-core machine)
-    Snowflake Free Trial (for the Gold layer serving)
+## 🏗️ The Four Pillars of the Architecture
 
-Installation
-Clone the Repository
+### 1. Ingestion & Feature Engineering (Silver Layer)
+* **Technology:** Apache Spark & Apache Iceberg.
+* **Process:** Raw transaction data is transformed into anonymized vectors.
+* **Outcome:** A versioned, high-performance Silver layer preserving privacy while maintaining statistical signal.
 
-Bash
-git clone https://github.com/your-username/argus-lakehouse.git
-cd argus-lakehouse
-Initialize the Environment We use a generic Make command to build the Docker container with Java 17 and Spark 3.5.
+### 2. The Data Vault 2.0 Core (Vault Layer)
+* **Technology:** dbt & DuckDB.
+* **Process:** Implements a scalable **Hub-and-Satellite** model.
+    * **Hubs:** Immutable business keys (Transaction IDs).
+    * **Satellites:** Contextual data (PCA features) and AI-generated insights.
+* **Outcome:** A fully auditable history fulfilling "Right to Audit" compliance.
 
-Bash
-make setup
-Run the Pipeline (Simulated) This runs the PySpark job to ingest dummy data and write it to the local data/warehouse folder in Iceberg format.
+### 3. Statistical Integrity (The Eigen-Audit)
+* **Technology:** Python, NumPy.
+* **Process:** A custom audit suite calculating **Eigenvalues** of PCA features to detect model drift and ensure variance integrity.
 
-Bash
-python src/jobs/etl_ingest.py
-Verify with DuckDB Query the generated Iceberg table instantly.
+### 4. Explainable AI (The Gold Layer)
+* **Technology:** Ollama (Llama 3 / Gemma 3).
+* **Process:** Maps "black-box" PCA vectors to human-readable forensic reports.
+* **Outcome:** Provides plain-language justifications for fraud flags to bank auditors.
 
-Bash
-python src/debug/check_data.py
+---
+
+## 🧬 Deep Dive: Understanding the PCA Vectors
+
+### What is a PCA Vector?
+PCA "squashes" hundreds of raw banking dimensions into uncorrelated variables called **Principal Components ($V1...Vn$)**.
+
+
+
+### The Math: Eigenvalues & Variance
+* **Eigenvalues ($\lambda$):** These represent the **strength** of a signal.
+* **The Audit:** Our pipeline ensures the first 5 components capture $>90\%$ of total variance, ensuring the "signal" of fraud isn't lost in the "noise" of normal spending.
+
+### Interpreting the "V" Signals
+| Component | Likely Interpretation (In Banking Context) |
+| :--- | :--- |
+| **V17** | **Geospatial Velocity:** High negative values often indicate "impossible travel" scenarios. |
+| **V14** | **Temporal Shift:** Detects unusual spending times or sudden merchant category switches. |
+| **V12** | **Profile Match:** Measures how well the transaction fits the historical behavior of the cardholder. |
+
+---
+
+## 🚀 Execution Guide: Step-by-Step
+
+### 1. Environment Initialization
+Ensure your Python virtual environment is active and all dependencies are installed.
+```bash
+source .venv/bin/activate
+./.msb-poc/bin/pip install -r requirements.txt
 
 argus-lakehouse/
 ├── .devcontainer/
@@ -71,3 +99,81 @@ Code: See src/models/silver_vault_logic.sql.
 Experiment C: Policy Enforcement
 
 Goal: Demonstrate that cc_num is never exposed in clear text in the Silver layer.
+
+Layer	Technology	Purpose	Data State
+Bronze	Delta Lake / Spark	Raw Ingestion	Raw JSON/CSV
+Silver	Iceberg / Spark	Feature Engineering	Anonymized PCA Vectors
+Vault	dbt / DuckDB	Audit & Governance	Hashed Historical State
+
+
+2. Infrastructure Setup (Ollama)
+Run this once to enable the local AI "Brain."
+
+Bash
+# Install Ollama
+curl -fsSL [https://ollama.com/install.sh](https://ollama.com/install.sh) | sh
+
+# Start the Ollama server (Keep this terminal tab open)
+ollama serve
+
+# Pull the required model
+ollama pull llama3
+
+3. Build the Data Vault (dbt)
+Transform the Iceberg Silver data into your Hubs and Satellites.
+
+Bash
+cd Transform
+../.msb-poc/bin/dbt run --profiles-dir .
+
+4. Validate Data Quality
+Verify the integrity of Business Keys and Fraud Labels.
+
+Bash
+../.msb-poc/bin/dbt test --profiles-dir .
+cd ..
+
+5. Execute the Statistical Eigen-Audit
+Verify that the PCA components are maintaining the expected signal-to-noise ratio.
+
+Bash
+# Grant execution permissions
+chmod +x scripts/audit_eigen_variance.py
+
+# Run the audit using the project python
+./.venv/bin/python scripts/audit_eigen_variance.py --size 1000
+
+
+6. Generate AI Forensic Reports
+Bridge the Vault data with the local LLM to explain the "🚩 FRAUD" flags.
+
+Bash
+# Ensure 'ollama serve' is running
+./.venv/bin/python scripts/ai_fraud_explainer.py
+
+
+⚖️ Governance & Compliance
+This project follows BCBS 239 principles:
+
+Lineage: Every record includes a record_source.
+
+Accuracy: dbt tests ensure no null labels or duplicate business keys.
+
+Explainability: AI-flagged transactions include a forensic interpretation satellite.
+
+Summary:
+
+Designed and implemented a production-grade Financial Fraud Detection Platform that bridges the gap between high-performance Data Engineering and Regulatory Compliance.
+Moving beyond traditional "black box" ML, this architecture establishes a Governed Data Mesh where every AI inference is treated as an auditable data product.
+
+Key Architectural Pillars:
+
+Immutable History (Data Vault 2.0): Leveraged dbt and DuckDB to build a scalable Hub-and-Satellite model, ensuring 100% auditability of transaction history and model versions.
+
+Statistical Rigor (Eigen-Audit): Engineered a custom Python/NumPy pipeline to continuously validate the variance (Eigenvalues) of PCA vectors, preventing model drift before it impacts decision-making.
+
+Explainable AI (XAI): Integrated Llama 3 (via Ollama) directly into the data pipeline. The system automatically converts abstract feature vectors into human-readable forensic narratives, satisfying "Right to Explanation" regulatory requirements (BCBS 239).
+
+Modern Stack Integration: Orchestrated a seamless flow from Apache Iceberg (Silver Layer) to a denormalized Gold Information Mart, demonstrating end-to-end lineage from ingestion to insight.
+
+Tech Stack: dbt DuckDB Apache Iceberg Python Llama 3 Docker/Codespaces

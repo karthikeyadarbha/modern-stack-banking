@@ -34,15 +34,26 @@ def run_ingestion():
         .mode("overwrite") \
         .saveAsTable(f"default.{bronze_table}")
         
-    # 5. Write to Silver (Iceberg) - The "Shared" Layer
-    # We explicitly select columns to expose to Snowflake (excluding the complex Map for now)
+    # ... inside src/jobs/etl_ingest.py ...
+
+    # 1. Read from the Bronze (Delta) table we just wrote
+    df_bronze = spark.read.format("delta").table("raw_transactions_delta")
+    
     print("❄️  Promoting to Silver (Iceberg) for Snowflake usage...")
     
-    df_raw.select("txn_id", "account_id", "amount", "txn_ts", "is_fraud_label") \
-        .write \
-        .format("iceberg") \
-        .mode("overwrite") \
-        .saveAsTable("local.db.silver_transactions")
+    # 2. Define df_silver (The Transformation Step)
+    # We'll just pass it through for now, but this is where you'd add clean-up logic
+    df_silver = df_bronze
+
+    print("❄️  Promoting to Silver (Iceberg) for Snowflake usage...")
+    
+    # --- ARCHITECT FIX: Explicitly Drop before Create ---
+    # This forces the Hadoop Catalog to reset its state, preventing the version-hint mismatch
+    spark.sql("DROP TABLE IF EXISTS local.db.silver_transactions")
+
+    # Now write cleanly as a new table
+    df_silver.writeTo("local.db.silver_transactions") \
+        .create()  # Changed from createOrReplace() to create() since we just dropped it
 
     print("✅ Pipeline Complete.")
 

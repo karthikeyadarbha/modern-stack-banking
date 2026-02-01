@@ -1,0 +1,11 @@
+modern_stack_banking:
+  outputs:
+    dev:
+      type: duckdb
+      path: /workspaces/modern-stack-banking/data/warehouse/argus_vault.db
+      extensions:
+        - iceberg
+        - httpfs
+      settings:
+        unsafe_enable_version_guessing: true  # <--- Add this line!
+  target: dev

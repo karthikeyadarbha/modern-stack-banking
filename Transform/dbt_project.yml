@@ -1,0 +1,13 @@
+name: 'modern_stack_banking'  # <--- Add this line!
+version: '1.0.0'
+config-version: 2
+
+# The rest of your configuration...
+profile: 'modern_stack_banking' 
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
