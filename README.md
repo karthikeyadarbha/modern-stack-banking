@@ -207,3 +207,8 @@ We address the **Right to Explanation** (a core tenet of BCBS 239 and GDPR) thro
 
 # Generate Final Compliance Report
 ./.venv/bin/python scripts/governance/governance_dashboard.py
+
+
+The PCA Metadata & Scoring Process
+
+To protect sensitive information while maintaining detection accuracy, the engineering pipeline calculates Principal Component (PC) Scores. This process starts with Standardization, where raw values like currency amounts are mean-centered and scaled so that large numbers don't unfairly bias the model. These values are then Projected onto a specific Eigenvector—a mathematical "recipe" that defines a new axis of behavior.The resulting PC Score is the specific number stored in your database; it represents the standardized distance of a transaction from the "average" behavior. While the Eigenvalue tells us the total importance of a column (its variance), the PC Score is the actual measurement used to flag outliers. For example, a score of $+5.0$ on a velocity component indicates a transaction is five standard deviations away from the norm, triggering an automatic investigation.
