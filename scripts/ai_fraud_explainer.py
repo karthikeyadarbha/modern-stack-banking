@@ -4,11 +4,11 @@ import requests
 import subprocess
 import json
 
-def explain_and_store_fraud():
-    # 1. Fetch a target fraud case by JOINING Hub and Sat
+def process_unexplained_fraud(limit=5):
+    """Finds fraud cases without explanations and processes them in a batch."""
     con = duckdb.connect('data/warehouse/argus_vault.db')
     
-    # CORRECTED QUERY: Joins Hub (for ID) and Sat (for Features)
+    # ADVANCED QUERY: Identifies the 'Explanation Gap' using a LEFT JOIN
     query = """
         SELECT 
             h.txn_id, 
@@ -16,53 +16,54 @@ def explain_and_store_fraud():
             s.pca_features 
         FROM sat_txn_features s
         JOIN hubs_transactions h ON s.txn_hash_key = h.txn_hash_key
+        LEFT JOIN sat_txn_ai_insights a ON s.txn_hash_key = a.txn_hash_key
         WHERE s.is_fraud_label = 1 
-        LIMIT 1
+          AND a.ai_reason_for_flag IS NULL
+        LIMIT ?
     """
     
     try:
-        case = con.execute(query).fetchone()
+        unexplained_cases = con.execute(query, [limit]).fetchall()
     except Exception as e:
         print(f"❌ Database Error: {e}")
         return
     finally:
         con.close()
 
-    if not case: 
-        print("No fraud cases found.")
+    if not unexplained_cases: 
+        print("✅ Success: All fraud cases are currently explained. Coverage is 100%.")
         return
 
-    txn_id, amount, pca_features = case
-    print(f"🔍 Analyzing Transaction: {txn_id} (${amount})")
+    print(f"🚀 Found {len(unexplained_cases)} unexplained cases. Starting batch inference...")
 
-    # 2. Get AI Explanation
-    prompt = f"System: Financial Forensic Analyst. Explain why this txn is fraud based on these PCA factors: {pca_features}. Keep it under 20 words."
-    
-    try:
-        # Call Ollama
-        response = requests.post('http://localhost:11434/api/generate', 
-                                json={"model": "llama3", "prompt": prompt, "stream": False})
+    for txn_id, amount, pca_features in unexplained_cases:
+        print(f"\n🔍 Analyzing: {txn_id}")
         
-        # Clean the response text to prevent SQL injection issues
-        ai_text = response.json().get('response', 'No response').replace("'", "").replace('"', '').replace("\n", " ")
+        prompt = (f"System: Financial Forensic Analyst. Explain why this txn is fraud based "
+                  f"on these PCA factors: {pca_features}. Keep it under 15 words.")
         
-        print(f"🤖 AI Insight: {ai_text}")
+        try:
+            # Call Ollama (Llama3)
+            response = requests.post('http://localhost:11434/api/generate', 
+                                    json={"model": "llama3", "prompt": prompt, "stream": False})
+            
+            ai_text = response.json().get('response', 'No response').replace("'", "").replace("\n", " ")
+            print(f"🤖 AI Insight: {ai_text}")
 
-        # 3. WRITE BACK: Trigger dbt to insert this specific record
-        print("💾 Saving insight to Data Vault...")
-        dbt_cmd = [
-            "../.msb-poc/bin/dbt", "run",
-            "--select", "sat_txn_ai_insights",
-            "--vars", f'{{"txn_id": "{txn_id}", "ai_explanation": "{ai_text}"}}',
-            "--profiles-dir", "."
-        ]
-        
-        # We run this from the 'Transform' directory context
-        subprocess.run(dbt_cmd, cwd="Transform", check=True)
-        print("✅ Insight successfully stored.")
+            # WRITE BACK to Data Vault via dbt
+            dbt_cmd = [
+                "../.msb-poc/bin/dbt", "run",
+                "--select", "sat_txn_ai_insights",
+                "--vars", f'{{"txn_id": "{txn_id}", "ai_explanation": "{ai_text}"}}',
+                "--profiles-dir", "."
+            ]
+            
+            subprocess.run(dbt_cmd, cwd="Transform", check=True, capture_output=True)
+            print(f"💾 Insight stored for {txn_id}")
 
-    except Exception as e:
-        print(f"❌ Error during AI/dbt execution: {e}")
+        except Exception as e:
+            print(f"❌ Error processing {txn_id}: {e}")
 
 if __name__ == "__main__":
-    explain_and_store_fraud()
+    # You can increase this limit once you verify the first few work!
+    process_unexplained_fraud(limit=3)

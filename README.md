@@ -1,6 +1,6 @@
 # modern-stack-banking
 
-Argus-Lakehouse is a proof-of-concept (PoC) for a Secure, Hybrid Data Lakehouse designed for the banking sector. It solves the "Data Gravity" problem by decoupling compute from storage using Apache Iceberg, allowing seamless interoperability between Databricks (Engineering), Snowflake (Serving), and DuckDB (Local Development).
+A Hybrid Data Lakehouse designed for the banking sector. It solves the "Data Gravity" problem by decoupling compute from storage using Apache Iceberg, allowing seamless interoperability between Databricks (Engineering), Kaggle Dataset / Snowflake (Serving), and DuckDB (Local Development).
 
 # 🏦 Modern Stack Banking: Governed Fraud Detection
 **An End-to-End Data Vault 2.0 & AI-Inference Framework**
@@ -177,3 +177,33 @@ Explainable AI (XAI): Integrated Llama 3 (via Ollama) directly into the data pip
 Modern Stack Integration: Orchestrated a seamless flow from Apache Iceberg (Silver Layer) to a denormalized Gold Information Mart, demonstrating end-to-end lineage from ingestion to insight.
 
 Tech Stack: dbt DuckDB Apache Iceberg Python Llama 3 Docker/Codespaces
+
+---
+
+## ⚖️ Governance & Operational Excellence
+
+This repository moves beyond experimental AI by implementing a **Dual-Domain Scripting** architecture. 
+
+### 1. Script Taxonomy
+| Domain | Folder | Purpose |
+| :--- | :--- | :--- |
+| **Governance** | `scripts/governance/` | Read-only audits for mathematical integrity and compliance reporting. |
+| **AI Ops** | `scripts/ai_ops/` | Write-active pipelines that bridge Data Vault storage with LLM inference. |
+
+### 2. The "Self-Healing" Compliance Loop
+We address the **Right to Explanation** (a core tenet of BCBS 239 and GDPR) through an automated loop:
+1.  **Detection:** The `governance_dashboard.py` identifies "Explanation Gaps" where fraud is flagged but no forensic narrative exists.
+2.  **Remediation:** The `ai_fraud_explainer.py` uses a **Batch-Processor** pattern to target these gaps, generating explanations only for unexplained records.
+3.  **Verification:** The dashboard is re-run to confirm 100% coverage, providing an immutable audit trail for regulators.
+
+
+### 3. Execution Commands (Refactored)
+```bash
+# Verify Model Math
+./.venv/bin/python scripts/governance/audit_eigen_variance.py
+
+# Execute Batch AI Inference (Operationalize)
+./.venv/bin/python scripts/ai_fraud_explainer.py
+
+# Generate Final Compliance Report
+./.venv/bin/python scripts/governance/governance_dashboard.py

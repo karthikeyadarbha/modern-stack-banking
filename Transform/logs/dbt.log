@@ -2670,3 +2670,1833 @@ parsing.
 [0m12:59:22.194913 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c5dba102420>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c5dba1033b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c5dba103830>]}
 [0m12:59:22.195410 [debug] [MainThread]: Flushing usage events
 [0m12:59:23.252567 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:35:39.388554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0f0907020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0f2cbf590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0f1003590>]}
+
+
+============================== 16:35:39.393687 | d5ef4b8a-37f4-4ab5-9723-4b2f16392edb ==============================
+[0m16:35:39.393687 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:35:39.394359 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'partial_parse': 'True', 'log_format': 'default', 'static_parser': 'True', 'cache_selected_only': 'False', 'introspect': 'True', 'profiles_dir': '.', 'log_cache_events': 'False', 'write_json': 'True', 'warn_error': 'None', 'empty': 'False', 'indirect_selection': 'eager', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'log_path': '/workspaces/modern-stack-banking/Transform/logs', 'printer_width': '80', 'use_colors': 'True', 'quiet': 'False', 'fail_fast': 'False', 'invocation_command': 'dbt run --select gold_fraud_dashboard --profiles-dir .', 'debug': 'False'}
+[0m16:35:39.667009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd5ef4b8a-37f4-4ab5-9723-4b2f16392edb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0efee30b0>]}
+[0m16:35:39.739344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd5ef4b8a-37f4-4ab5-9723-4b2f16392edb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0f1398a70>]}
+[0m16:35:39.741140 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m16:35:39.829714 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m16:35:39.926110 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m16:35:39.926736 [debug] [MainThread]: previous checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, current checksum: c54556ce5f4b3bcdaa63e85a86dd5e003bc249ee819bd6d4de7b6eb44417b8c3
+[0m16:35:39.927233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd5ef4b8a-37f4-4ab5-9723-4b2f16392edb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0e41a25a0>]}
+[0m16:35:41.156134 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'gold_fraud_analysis' in package 'modern_stack_banking'
+(models/Gold/schema.yml). Arguments to generic tests should be nested under the
+`arguments` property.
+[0m16:35:41.156830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'd5ef4b8a-37f4-4ab5-9723-4b2f16392edb', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0e3f83800>]}
+[0m16:35:41.249312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd5ef4b8a-37f4-4ab5-9723-4b2f16392edb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0eff3d490>]}
+[0m16:35:41.320221 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/modern-stack-banking/Transform/target/manifest.json
+[0m16:35:41.322212 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/modern-stack-banking/Transform/target/semantic_manifest.json
+[0m16:35:41.340085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd5ef4b8a-37f4-4ab5-9723-4b2f16392edb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0e01cd8e0>]}
+[0m16:35:41.340751 [info ] [MainThread]: Found 5 models, 5 data tests, 472 macros
+[0m16:35:41.341273 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5ef4b8a-37f4-4ab5-9723-4b2f16392edb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0e3f11820>]}
+[0m16:35:41.343128 [info ] [MainThread]: 
+[0m16:35:41.343639 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:35:41.344169 [info ] [MainThread]: 
+[0m16:35:41.344858 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:35:41.345948 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_argus_vault'
+[0m16:35:41.628349 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault"
+[0m16:35:41.629025 [debug] [ThreadPool]: On list_argus_vault: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "list_argus_vault"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"argus_vault"'
+    
+  
+  
+[0m16:35:41.629464 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:35:46.523423 [debug] [ThreadPool]: SQL status: OK in 4.894 seconds
+[0m16:35:46.525206 [debug] [ThreadPool]: On list_argus_vault: Close
+[0m16:35:46.526218 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_argus_vault, now create_argus_vault_main)
+[0m16:35:46.526844 [debug] [ThreadPool]: Creating schema "database: "argus_vault"
+schema: "main"
+"
+[0m16:35:46.534560 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:35:46.535057 [debug] [ThreadPool]: On create_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "create_argus_vault_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='argus_vault'
+        and type='sqlite'
+    
+  
+[0m16:35:46.535490 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:35:46.536746 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:35:46.538161 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:35:46.538613 [debug] [ThreadPool]: On create_argus_vault_main: BEGIN
+[0m16:35:46.539304 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:35:46.539743 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:35:46.540196 [debug] [ThreadPool]: On create_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "create_argus_vault_main"} */
+
+    
+    
+        create schema if not exists "argus_vault"."main"
+    
+[0m16:35:46.540844 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:35:46.541811 [debug] [ThreadPool]: On create_argus_vault_main: COMMIT
+[0m16:35:46.542284 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:35:46.542701 [debug] [ThreadPool]: On create_argus_vault_main: COMMIT
+[0m16:35:46.543385 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:35:46.543828 [debug] [ThreadPool]: On create_argus_vault_main: Close
+[0m16:35:46.549587 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_argus_vault_main, now list_argus_vault_main)
+[0m16:35:46.555893 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault_main"
+[0m16:35:46.556457 [debug] [ThreadPool]: On list_argus_vault_main: BEGIN
+[0m16:35:46.556870 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:35:46.557810 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:35:46.558274 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault_main"
+[0m16:35:46.558698 [debug] [ThreadPool]: On list_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "list_argus_vault_main"} */
+select
+      'argus_vault' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'argus_vault'
+  
+[0m16:35:46.569568 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m16:35:46.571038 [debug] [ThreadPool]: On list_argus_vault_main: ROLLBACK
+[0m16:35:46.572299 [debug] [ThreadPool]: Failed to rollback 'list_argus_vault_main'
+[0m16:35:46.572746 [debug] [ThreadPool]: On list_argus_vault_main: Close
+[0m16:35:46.574575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5ef4b8a-37f4-4ab5-9723-4b2f16392edb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0e41a28d0>]}
+[0m16:35:46.575255 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:35:46.575839 [debug] [MainThread]: On master: BEGIN
+[0m16:35:46.576368 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:35:46.577539 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:35:46.578005 [debug] [MainThread]: On master: COMMIT
+[0m16:35:46.578432 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:35:46.578838 [debug] [MainThread]: On master: COMMIT
+[0m16:35:46.579484 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:35:46.579949 [debug] [MainThread]: On master: Close
+[0m16:35:46.582412 [debug] [Thread-1 (]: Began running node model.modern_stack_banking.gold_fraud_dashboard
+[0m16:35:46.583146 [info ] [Thread-1 (]: 1 of 1 START sql view model main.gold_fraud_dashboard .......................... [RUN]
+[0m16:35:46.583740 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_argus_vault_main, now model.modern_stack_banking.gold_fraud_dashboard)
+[0m16:35:46.584266 [debug] [Thread-1 (]: Began compiling node model.modern_stack_banking.gold_fraud_dashboard
+[0m16:35:46.592498 [debug] [Thread-1 (]: Writing injected SQL for node "model.modern_stack_banking.gold_fraud_dashboard"
+[0m16:35:46.593241 [debug] [Thread-1 (]: Began executing node model.modern_stack_banking.gold_fraud_dashboard
+[0m16:35:46.624500 [debug] [Thread-1 (]: Writing runtime sql for node "model.modern_stack_banking.gold_fraud_dashboard"
+[0m16:35:46.625307 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.gold_fraud_dashboard"
+[0m16:35:46.625801 [debug] [Thread-1 (]: On model.modern_stack_banking.gold_fraud_dashboard: BEGIN
+[0m16:35:46.626284 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:35:46.627646 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:35:46.628156 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.gold_fraud_dashboard"
+[0m16:35:46.628656 [debug] [Thread-1 (]: On model.modern_stack_banking.gold_fraud_dashboard: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.gold_fraud_dashboard"} */
+
+  
+  create view "argus_vault"."main"."gold_fraud_dashboard__dbt_tmp" as (
+    
+
+WITH hubs AS (
+    SELECT txn_hash_key, txn_id, load_date as established_date 
+    FROM "argus_vault"."main"."hubs_transactions"
+),
+features AS (
+    SELECT txn_hash_key, amount, is_fraud_label, pca_features, load_date
+    FROM "argus_vault"."main"."sat_txn_features"
+    QUALIFY ROW_NUMBER() OVER (PARTITION BY txn_hash_key ORDER BY load_date DESC) = 1
+),
+ai_insights AS (
+    SELECT txn_hash_key, ai_reason_for_flag, load_date
+    FROM "argus_vault"."main"."sat_txn_ai_insights"
+    QUALIFY ROW_NUMBER() OVER (PARTITION BY txn_hash_key ORDER BY load_date DESC) = 1
+)
+
+SELECT 
+    h.txn_id,
+    f.amount,
+    f.is_fraud_label,
+    CASE WHEN f.is_fraud_label = 1 THEN '🚩 FRAUD' ELSE '✅ NORMAL' END as fraud_status,
+    a.ai_reason_for_flag as forensic_explanation,
+    -- ADD THESE COLUMNS FOR THE GOVERNANCE SCRIPT
+    h.established_date,
+    a.load_date as insight_date, 
+    f.pca_features
+FROM hubs h
+LEFT JOIN features f ON h.txn_hash_key = f.txn_hash_key
+LEFT JOIN ai_insights a ON h.txn_hash_key = a.txn_hash_key
+  );
+
+[0m16:35:46.629993 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:35:46.636239 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.gold_fraud_dashboard"
+[0m16:35:46.636746 [debug] [Thread-1 (]: On model.modern_stack_banking.gold_fraud_dashboard: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.gold_fraud_dashboard"} */
+alter view "argus_vault"."main"."gold_fraud_dashboard" rename to "gold_fraud_dashboard__dbt_backup"
+[0m16:35:46.637583 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:35:46.640573 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.gold_fraud_dashboard"
+[0m16:35:46.641088 [debug] [Thread-1 (]: On model.modern_stack_banking.gold_fraud_dashboard: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.gold_fraud_dashboard"} */
+alter view "argus_vault"."main"."gold_fraud_dashboard__dbt_tmp" rename to "gold_fraud_dashboard"
+[0m16:35:46.641927 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:35:46.654376 [debug] [Thread-1 (]: On model.modern_stack_banking.gold_fraud_dashboard: COMMIT
+[0m16:35:46.654883 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.gold_fraud_dashboard"
+[0m16:35:46.655369 [debug] [Thread-1 (]: On model.modern_stack_banking.gold_fraud_dashboard: COMMIT
+[0m16:35:46.659120 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m16:35:46.665201 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.gold_fraud_dashboard"
+[0m16:35:46.665720 [debug] [Thread-1 (]: On model.modern_stack_banking.gold_fraud_dashboard: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.gold_fraud_dashboard"} */
+
+      drop view if exists "argus_vault"."main"."gold_fraud_dashboard__dbt_backup" cascade
+    
+[0m16:35:46.667731 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:35:46.670241 [debug] [Thread-1 (]: On model.modern_stack_banking.gold_fraud_dashboard: Close
+[0m16:35:46.671935 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5ef4b8a-37f4-4ab5-9723-4b2f16392edb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0e3f28f80>]}
+[0m16:35:46.672692 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.gold_fraud_dashboard ..................... [[32mOK[0m in 0.09s]
+[0m16:35:46.673437 [debug] [Thread-1 (]: Finished running node model.modern_stack_banking.gold_fraud_dashboard
+[0m16:35:46.674907 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:35:46.675436 [debug] [MainThread]: On master: BEGIN
+[0m16:35:46.675954 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:35:46.677291 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:35:46.677747 [debug] [MainThread]: On master: COMMIT
+[0m16:35:46.678200 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:35:46.678607 [debug] [MainThread]: On master: COMMIT
+[0m16:35:46.679273 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:35:46.679713 [debug] [MainThread]: On master: Close
+[0m16:35:46.680337 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:35:46.680741 [debug] [MainThread]: Connection 'model.modern_stack_banking.gold_fraud_dashboard' was properly closed.
+[0m16:35:46.681208 [info ] [MainThread]: 
+[0m16:35:46.681678 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 5.34 seconds (5.34s).
+[0m16:35:46.682489 [debug] [MainThread]: Command end result
+[0m16:35:46.702636 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/modern-stack-banking/Transform/target/manifest.json
+[0m16:35:46.704401 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/modern-stack-banking/Transform/target/semantic_manifest.json
+[0m16:35:46.710145 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/modern-stack-banking/Transform/target/run_results.json
+[0m16:35:46.710583 [info ] [MainThread]: 
+[0m16:35:46.711129 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:35:46.711568 [info ] [MainThread]: 
+[0m16:35:46.712055 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:35:46.712681 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m16:35:46.714083 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.3889704, "process_in_blocks": "246368", "process_kernel_time": 0.439777, "process_mem_max_rss": "259620", "process_out_blocks": "3144", "process_user_time": 4.221061}
+[0m16:35:46.714685 [debug] [MainThread]: Command `dbt run` succeeded at 16:35:46.714578 after 7.39 seconds
+[0m16:35:46.715201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0f021eba0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0f0e55610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a0f074aab0>]}
+[0m16:35:46.715691 [debug] [MainThread]: Flushing usage events
+[0m16:35:47.813757 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:44:01.389871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a11556f6930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1157c45af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1155b137a0>]}
+
+
+============================== 16:44:01.393279 | 5add57a0-4f14-4eec-97a4-eff364ac9c4d ==============================
+[0m16:44:01.393279 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:44:01.393940 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'warn_error': 'None', 'debug': 'False', 'introspect': 'True', 'indirect_selection': 'eager', 'write_json': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'fail_fast': 'False', 'quiet': 'False', 'partial_parse': 'True', 'profiles_dir': '.', 'no_print': 'None', 'version_check': 'True', 'log_format': 'default', 'use_colors': 'True', 'invocation_command': 'dbt run --select sat_txn_ai_insights --vars {"txn_id": "5c6a2982-6fa4-4dcb-89ac-d7d90dd3bc33", "ai_explanation": "Based on PCA factors, this transaction exhibits extreme values in V1-V3 and V13-V16, indicating fraudulent activity."} --profiles-dir .', 'log_path': '/workspaces/modern-stack-banking/Transform/logs', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m16:44:01.638965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5add57a0-4f14-4eec-97a4-eff364ac9c4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1155c68cb0>]}
+[0m16:44:01.710022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5add57a0-4f14-4eec-97a4-eff364ac9c4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1157854bf0>]}
+[0m16:44:01.711761 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m16:44:01.797220 [debug] [MainThread]: checksum: 7acfa76432ee7ad17f3ea5348588822be40c91cb0c492f5a6713cf20f34c8cdb, vars: {'ai_explanation': 'Based on PCA factors, this transaction exhibits extreme '
+                   'values in V1-V3 and V13-V16, indicating fraudulent '
+                   'activity.',
+ 'txn_id': '5c6a2982-6fa4-4dcb-89ac-d7d90dd3bc33'}, profile: , target: , version: 1.11.2
+[0m16:44:01.891861 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m16:44:01.892503 [debug] [MainThread]: previous checksum: 7acfa76432ee7ad17f3ea5348588822be40c91cb0c492f5a6713cf20f34c8cdb, current checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b
+[0m16:44:01.892990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '5add57a0-4f14-4eec-97a4-eff364ac9c4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1148f996d0>]}
+[0m16:44:03.127712 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'gold_fraud_analysis' in package 'modern_stack_banking'
+(models/Gold/schema.yml). Arguments to generic tests should be nested under the
+`arguments` property.
+[0m16:44:03.128420 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '5add57a0-4f14-4eec-97a4-eff364ac9c4d', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1148f71760>]}
+[0m16:44:03.221527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5add57a0-4f14-4eec-97a4-eff364ac9c4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1149124d40>]}
+[0m16:44:03.290678 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/modern-stack-banking/Transform/target/manifest.json
+[0m16:44:03.292475 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/modern-stack-banking/Transform/target/semantic_manifest.json
+[0m16:44:03.304846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5add57a0-4f14-4eec-97a4-eff364ac9c4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1148116360>]}
+[0m16:44:03.305453 [info ] [MainThread]: Found 5 models, 5 data tests, 472 macros
+[0m16:44:03.305941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5add57a0-4f14-4eec-97a4-eff364ac9c4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1148052b40>]}
+[0m16:44:03.307672 [info ] [MainThread]: 
+[0m16:44:03.308183 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:44:03.308611 [info ] [MainThread]: 
+[0m16:44:03.309233 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:44:03.310229 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_argus_vault'
+[0m16:44:03.346013 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault"
+[0m16:44:03.346581 [debug] [ThreadPool]: On list_argus_vault: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "list_argus_vault"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"argus_vault"'
+    
+  
+  
+[0m16:44:03.347045 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:44:03.434319 [debug] [ThreadPool]: SQL status: OK in 0.087 seconds
+[0m16:44:03.435984 [debug] [ThreadPool]: On list_argus_vault: Close
+[0m16:44:03.436829 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_argus_vault, now create_argus_vault_main)
+[0m16:44:03.437464 [debug] [ThreadPool]: Creating schema "database: "argus_vault"
+schema: "main"
+"
+[0m16:44:03.444804 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:44:03.445314 [debug] [ThreadPool]: On create_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "create_argus_vault_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='argus_vault'
+        and type='sqlite'
+    
+  
+[0m16:44:03.445732 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:44:03.447381 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m16:44:03.448758 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:44:03.449219 [debug] [ThreadPool]: On create_argus_vault_main: BEGIN
+[0m16:44:03.449831 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:44:03.450278 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:44:03.450685 [debug] [ThreadPool]: On create_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "create_argus_vault_main"} */
+
+    
+    
+        create schema if not exists "argus_vault"."main"
+    
+[0m16:44:03.451385 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:44:03.452312 [debug] [ThreadPool]: On create_argus_vault_main: COMMIT
+[0m16:44:03.452744 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:44:03.453183 [debug] [ThreadPool]: On create_argus_vault_main: COMMIT
+[0m16:44:03.453764 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:44:03.454213 [debug] [ThreadPool]: On create_argus_vault_main: Close
+[0m16:44:03.459977 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_argus_vault_main, now list_argus_vault_main)
+[0m16:44:03.466126 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault_main"
+[0m16:44:03.466670 [debug] [ThreadPool]: On list_argus_vault_main: BEGIN
+[0m16:44:03.467103 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:44:03.468604 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:44:03.469073 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault_main"
+[0m16:44:03.469494 [debug] [ThreadPool]: On list_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "list_argus_vault_main"} */
+select
+      'argus_vault' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'argus_vault'
+  
+[0m16:44:03.481075 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m16:44:03.482837 [debug] [ThreadPool]: On list_argus_vault_main: ROLLBACK
+[0m16:44:03.484200 [debug] [ThreadPool]: Failed to rollback 'list_argus_vault_main'
+[0m16:44:03.484657 [debug] [ThreadPool]: On list_argus_vault_main: Close
+[0m16:44:03.486528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5add57a0-4f14-4eec-97a4-eff364ac9c4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1148dd3d10>]}
+[0m16:44:03.487196 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:44:03.487674 [debug] [MainThread]: On master: BEGIN
+[0m16:44:03.488141 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:44:03.489162 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:44:03.489619 [debug] [MainThread]: On master: COMMIT
+[0m16:44:03.490091 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:44:03.490519 [debug] [MainThread]: On master: COMMIT
+[0m16:44:03.491168 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:44:03.491624 [debug] [MainThread]: On master: Close
+[0m16:44:03.493761 [debug] [Thread-1 (]: Began running node model.modern_stack_banking.sat_txn_ai_insights
+[0m16:44:03.494510 [info ] [Thread-1 (]: 1 of 1 START sql incremental model main.sat_txn_ai_insights .................... [RUN]
+[0m16:44:03.495161 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_argus_vault_main, now model.modern_stack_banking.sat_txn_ai_insights)
+[0m16:44:03.495640 [debug] [Thread-1 (]: Began compiling node model.modern_stack_banking.sat_txn_ai_insights
+[0m16:44:03.503932 [debug] [Thread-1 (]: Writing injected SQL for node "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:03.504706 [debug] [Thread-1 (]: Began executing node model.modern_stack_banking.sat_txn_ai_insights
+[0m16:44:03.561678 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:03.562336 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+    
+  
+    
+    
+
+    create temporary table
+      "sat_txn_ai_insights__dbt_tmp20260201164403537119"
+  
+    as (
+      
+
+-- This model acts as the landing zone for our Python AI script
+-- It grabs the specific transaction from the Hub and attaches the explanation passed via variables
+SELECT
+    h.txn_hash_key,
+    'Based on PCA factors, this transaction exhibits extreme values in V1-V3 and V13-V16, indicating fraudulent activity.' as ai_reason_for_flag,
+    CURRENT_TIMESTAMP as load_date,
+    'LLAMA3_OLLAMA_FORENSIC' as record_source
+FROM "argus_vault"."main"."hubs_transactions" h
+WHERE h.txn_id = '5c6a2982-6fa4-4dcb-89ac-d7d90dd3bc33'
+    );
+  
+  
+  
+[0m16:44:03.562823 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:44:03.571665 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m16:44:03.579294 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:03.579806 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: BEGIN
+[0m16:44:03.580809 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:44:03.581322 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:03.581802 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights__dbt_tmp20260201164403537119'
+      
+      
+      order by ordinal_position
+
+  
+[0m16:44:03.584298 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m16:44:03.589384 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:03.589899 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'argus_vault'
+      
+      order by ordinal_position
+
+  
+[0m16:44:03.593170 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m16:44:03.603352 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:03.603878 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'argus_vault'
+      
+      order by ordinal_position
+
+  
+[0m16:44:03.606327 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m16:44:03.608185 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:03.608713 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+SELECT version()
+[0m16:44:03.609526 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:44:03.625880 [debug] [Thread-1 (]: Writing runtime sql for node "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:03.626689 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:03.627214 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+
+    insert into "argus_vault"."main"."sat_txn_ai_insights" ("txn_hash_key", "ai_reason_for_flag", "load_date", "record_source")
+    (
+        select "txn_hash_key", "ai_reason_for_flag", "load_date", "record_source"
+        from "sat_txn_ai_insights__dbt_tmp20260201164403537119"
+    )
+  
+[0m16:44:03.628640 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:44:03.639123 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: COMMIT
+[0m16:44:03.639642 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:03.640135 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: COMMIT
+[0m16:44:03.655716 [debug] [Thread-1 (]: SQL status: OK in 0.015 seconds
+[0m16:44:03.657898 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: Close
+[0m16:44:03.659699 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5add57a0-4f14-4eec-97a4-eff364ac9c4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a112bfa7500>]}
+[0m16:44:03.660487 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model main.sat_txn_ai_insights ............... [[32mOK[0m in 0.16s]
+[0m16:44:03.661227 [debug] [Thread-1 (]: Finished running node model.modern_stack_banking.sat_txn_ai_insights
+[0m16:44:03.662844 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:44:03.663417 [debug] [MainThread]: On master: BEGIN
+[0m16:44:03.663948 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:44:03.665051 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:44:03.665532 [debug] [MainThread]: On master: COMMIT
+[0m16:44:03.665994 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:44:03.666430 [debug] [MainThread]: On master: COMMIT
+[0m16:44:03.667099 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:44:03.667564 [debug] [MainThread]: On master: Close
+[0m16:44:03.668122 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:44:03.668558 [debug] [MainThread]: Connection 'model.modern_stack_banking.sat_txn_ai_insights' was properly closed.
+[0m16:44:03.669027 [info ] [MainThread]: 
+[0m16:44:03.669513 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.36 seconds (0.36s).
+[0m16:44:03.670334 [debug] [MainThread]: Command end result
+[0m16:44:03.690961 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/modern-stack-banking/Transform/target/manifest.json
+[0m16:44:03.692660 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/modern-stack-banking/Transform/target/semantic_manifest.json
+[0m16:44:03.698449 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/modern-stack-banking/Transform/target/run_results.json
+[0m16:44:03.698904 [info ] [MainThread]: 
+[0m16:44:03.699466 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:44:03.699949 [info ] [MainThread]: 
+[0m16:44:03.700450 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:44:03.701113 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m16:44:03.702207 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.3830264, "process_in_blocks": "0", "process_kernel_time": 0.284528, "process_mem_max_rss": "278992", "process_out_blocks": "3112", "process_user_time": 4.361122}
+[0m16:44:03.702804 [debug] [MainThread]: Command `dbt run` succeeded at 16:44:03.702698 after 2.38 seconds
+[0m16:44:03.703316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a11554498e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1155cb5dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1154c96de0>]}
+[0m16:44:03.703814 [debug] [MainThread]: Flushing usage events
+[0m16:44:04.927501 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:44:25.996112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797244a02690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7972443b92e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797244a00d40>]}
+
+
+============================== 16:44:25.999454 | 5f523cc3-c2f0-4c69-8ea5-84fc2e064855 ==============================
+[0m16:44:25.999454 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:44:26.000155 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'introspect': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'invocation_command': 'dbt run --select sat_txn_ai_insights --vars {"txn_id": "3020034b-dcc5-4997-a717-b8baf7e7cae4", "ai_explanation": "Based on PCA factors, this transaction is fraud due to extreme V12 and V17 values (-6.56 and -4.78, respectively)."} --profiles-dir .', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'warn_error': 'None', 'version_check': 'True', 'no_print': 'None', 'quiet': 'False', 'fail_fast': 'False', 'log_path': '/workspaces/modern-stack-banking/Transform/logs', 'log_cache_events': 'False', 'write_json': 'True', 'empty': 'False', 'debug': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'profiles_dir': '.', 'target_path': 'None', 'log_format': 'default'}
+[0m16:44:26.245479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5f523cc3-c2f0-4c69-8ea5-84fc2e064855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797243a393d0>]}
+[0m16:44:26.317843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5f523cc3-c2f0-4c69-8ea5-84fc2e064855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7972448e6360>]}
+[0m16:44:26.319763 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m16:44:26.404418 [debug] [MainThread]: checksum: ce50d21f1c1aabe4bcdf1732e057561620373ce2af482804f75ff604ab4abc72, vars: {'ai_explanation': 'Based on PCA factors, this transaction is fraud due to '
+                   'extreme V12 and V17 values (-6.56 and -4.78, '
+                   'respectively).',
+ 'txn_id': '3020034b-dcc5-4997-a717-b8baf7e7cae4'}, profile: , target: , version: 1.11.2
+[0m16:44:26.498715 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m16:44:26.499332 [debug] [MainThread]: previous checksum: ce50d21f1c1aabe4bcdf1732e057561620373ce2af482804f75ff604ab4abc72, current checksum: 7acfa76432ee7ad17f3ea5348588822be40c91cb0c492f5a6713cf20f34c8cdb
+[0m16:44:26.499818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '5f523cc3-c2f0-4c69-8ea5-84fc2e064855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79724414a510>]}
+[0m16:44:27.727225 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'gold_fraud_analysis' in package 'modern_stack_banking'
+(models/Gold/schema.yml). Arguments to generic tests should be nested under the
+`arguments` property.
+[0m16:44:27.727906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '5f523cc3-c2f0-4c69-8ea5-84fc2e064855', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797237961d60>]}
+[0m16:44:27.819778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5f523cc3-c2f0-4c69-8ea5-84fc2e064855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79723419a780>]}
+[0m16:44:27.889164 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/modern-stack-banking/Transform/target/manifest.json
+[0m16:44:27.890850 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/modern-stack-banking/Transform/target/semantic_manifest.json
+[0m16:44:27.903062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5f523cc3-c2f0-4c69-8ea5-84fc2e064855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797237927fb0>]}
+[0m16:44:27.903610 [info ] [MainThread]: Found 5 models, 5 data tests, 472 macros
+[0m16:44:27.904099 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5f523cc3-c2f0-4c69-8ea5-84fc2e064855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7972437a2ab0>]}
+[0m16:44:27.905808 [info ] [MainThread]: 
+[0m16:44:27.906326 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:44:27.906753 [info ] [MainThread]: 
+[0m16:44:27.907367 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:44:27.908362 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_argus_vault'
+[0m16:44:27.943492 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault"
+[0m16:44:27.944009 [debug] [ThreadPool]: On list_argus_vault: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "list_argus_vault"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"argus_vault"'
+    
+  
+  
+[0m16:44:27.944464 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:44:28.031597 [debug] [ThreadPool]: SQL status: OK in 0.087 seconds
+[0m16:44:28.033285 [debug] [ThreadPool]: On list_argus_vault: Close
+[0m16:44:28.034128 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_argus_vault, now create_argus_vault_main)
+[0m16:44:28.034710 [debug] [ThreadPool]: Creating schema "database: "argus_vault"
+schema: "main"
+"
+[0m16:44:28.042051 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:44:28.042514 [debug] [ThreadPool]: On create_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "create_argus_vault_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='argus_vault'
+        and type='sqlite'
+    
+  
+[0m16:44:28.042953 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:44:28.044310 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:44:28.045644 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:44:28.046105 [debug] [ThreadPool]: On create_argus_vault_main: BEGIN
+[0m16:44:28.047022 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:44:28.047458 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:44:28.047867 [debug] [ThreadPool]: On create_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "create_argus_vault_main"} */
+
+    
+    
+        create schema if not exists "argus_vault"."main"
+    
+[0m16:44:28.048521 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:44:28.049456 [debug] [ThreadPool]: On create_argus_vault_main: COMMIT
+[0m16:44:28.049898 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:44:28.050340 [debug] [ThreadPool]: On create_argus_vault_main: COMMIT
+[0m16:44:28.051234 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:44:28.051682 [debug] [ThreadPool]: On create_argus_vault_main: Close
+[0m16:44:28.057342 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_argus_vault_main, now list_argus_vault_main)
+[0m16:44:28.063257 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault_main"
+[0m16:44:28.063791 [debug] [ThreadPool]: On list_argus_vault_main: BEGIN
+[0m16:44:28.064290 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:44:28.065244 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:44:28.065679 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault_main"
+[0m16:44:28.066135 [debug] [ThreadPool]: On list_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "list_argus_vault_main"} */
+select
+      'argus_vault' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'argus_vault'
+  
+[0m16:44:28.077168 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m16:44:28.078688 [debug] [ThreadPool]: On list_argus_vault_main: ROLLBACK
+[0m16:44:28.079976 [debug] [ThreadPool]: Failed to rollback 'list_argus_vault_main'
+[0m16:44:28.080418 [debug] [ThreadPool]: On list_argus_vault_main: Close
+[0m16:44:28.081975 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5f523cc3-c2f0-4c69-8ea5-84fc2e064855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7971cf7004d0>]}
+[0m16:44:28.082592 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:44:28.083070 [debug] [MainThread]: On master: BEGIN
+[0m16:44:28.083500 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:44:28.084481 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:44:28.084971 [debug] [MainThread]: On master: COMMIT
+[0m16:44:28.085426 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:44:28.085858 [debug] [MainThread]: On master: COMMIT
+[0m16:44:28.086510 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:44:28.086989 [debug] [MainThread]: On master: Close
+[0m16:44:28.089067 [debug] [Thread-1 (]: Began running node model.modern_stack_banking.sat_txn_ai_insights
+[0m16:44:28.089776 [info ] [Thread-1 (]: 1 of 1 START sql incremental model main.sat_txn_ai_insights .................... [RUN]
+[0m16:44:28.090392 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_argus_vault_main, now model.modern_stack_banking.sat_txn_ai_insights)
+[0m16:44:28.090872 [debug] [Thread-1 (]: Began compiling node model.modern_stack_banking.sat_txn_ai_insights
+[0m16:44:28.099068 [debug] [Thread-1 (]: Writing injected SQL for node "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:28.099787 [debug] [Thread-1 (]: Began executing node model.modern_stack_banking.sat_txn_ai_insights
+[0m16:44:28.156502 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:28.157156 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+    
+  
+    
+    
+
+    create temporary table
+      "sat_txn_ai_insights__dbt_tmp20260201164428132008"
+  
+    as (
+      
+
+-- This model acts as the landing zone for our Python AI script
+-- It grabs the specific transaction from the Hub and attaches the explanation passed via variables
+SELECT
+    h.txn_hash_key,
+    'Based on PCA factors, this transaction is fraud due to extreme V12 and V17 values (-6.56 and -4.78, respectively).' as ai_reason_for_flag,
+    CURRENT_TIMESTAMP as load_date,
+    'LLAMA3_OLLAMA_FORENSIC' as record_source
+FROM "argus_vault"."main"."hubs_transactions" h
+WHERE h.txn_id = '3020034b-dcc5-4997-a717-b8baf7e7cae4'
+    );
+  
+  
+  
+[0m16:44:28.157647 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:44:28.166283 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m16:44:28.174225 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:28.174763 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: BEGIN
+[0m16:44:28.175525 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:44:28.176017 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:28.176487 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights__dbt_tmp20260201164428132008'
+      
+      
+      order by ordinal_position
+
+  
+[0m16:44:28.179443 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m16:44:28.184623 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:28.185162 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'argus_vault'
+      
+      order by ordinal_position
+
+  
+[0m16:44:28.187871 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m16:44:28.198305 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:28.198861 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'argus_vault'
+      
+      order by ordinal_position
+
+  
+[0m16:44:28.201742 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m16:44:28.203328 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:28.203834 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+SELECT version()
+[0m16:44:28.204938 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:44:28.221463 [debug] [Thread-1 (]: Writing runtime sql for node "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:28.222306 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:28.222807 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+
+    insert into "argus_vault"."main"."sat_txn_ai_insights" ("txn_hash_key", "ai_reason_for_flag", "load_date", "record_source")
+    (
+        select "txn_hash_key", "ai_reason_for_flag", "load_date", "record_source"
+        from "sat_txn_ai_insights__dbt_tmp20260201164428132008"
+    )
+  
+[0m16:44:28.224255 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:44:28.234786 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: COMMIT
+[0m16:44:28.235350 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:28.235813 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: COMMIT
+[0m16:44:28.258150 [debug] [Thread-1 (]: SQL status: OK in 0.022 seconds
+[0m16:44:28.260515 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: Close
+[0m16:44:28.262337 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5f523cc3-c2f0-4c69-8ea5-84fc2e064855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797246628cb0>]}
+[0m16:44:28.263148 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model main.sat_txn_ai_insights ............... [[32mOK[0m in 0.17s]
+[0m16:44:28.263870 [debug] [Thread-1 (]: Finished running node model.modern_stack_banking.sat_txn_ai_insights
+[0m16:44:28.265655 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:44:28.266170 [debug] [MainThread]: On master: BEGIN
+[0m16:44:28.266589 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:44:28.267658 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:44:28.268142 [debug] [MainThread]: On master: COMMIT
+[0m16:44:28.268558 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:44:28.269001 [debug] [MainThread]: On master: COMMIT
+[0m16:44:28.269612 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:44:28.270094 [debug] [MainThread]: On master: Close
+[0m16:44:28.270593 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:44:28.271023 [debug] [MainThread]: Connection 'model.modern_stack_banking.sat_txn_ai_insights' was properly closed.
+[0m16:44:28.271455 [info ] [MainThread]: 
+[0m16:44:28.271932 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.36 seconds (0.36s).
+[0m16:44:28.272718 [debug] [MainThread]: Command end result
+[0m16:44:28.292123 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/modern-stack-banking/Transform/target/manifest.json
+[0m16:44:28.293883 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/modern-stack-banking/Transform/target/semantic_manifest.json
+[0m16:44:28.299738 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/modern-stack-banking/Transform/target/run_results.json
+[0m16:44:28.300209 [info ] [MainThread]: 
+[0m16:44:28.300732 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:44:28.301198 [info ] [MainThread]: 
+[0m16:44:28.301671 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:44:28.302320 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m16:44:28.303399 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.3701522, "process_in_blocks": "0", "process_kernel_time": 0.303328, "process_mem_max_rss": "278880", "process_out_blocks": "3104", "process_user_time": 4.294182}
+[0m16:44:28.304012 [debug] [MainThread]: Command `dbt run` succeeded at 16:44:28.303885 after 2.37 seconds
+[0m16:44:28.304498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7972437befc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797244854710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7972444d8ef0>]}
+[0m16:44:28.305005 [debug] [MainThread]: Flushing usage events
+[0m16:44:29.284360 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:44:49.555901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e2a1cd4e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e2a46d9eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e2a2062870>]}
+
+
+============================== 16:44:49.559264 | a9dd9ad9-39e5-4fc5-9b41-02607e4f52b6 ==============================
+[0m16:44:49.559264 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:44:49.559979 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'quiet': 'False', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'warn_error': 'None', 'empty': 'False', 'printer_width': '80', 'debug': 'False', 'cache_selected_only': 'False', 'target_path': 'None', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --select sat_txn_ai_insights --vars {"txn_id": "0b2ff67a-e912-49eb-89b6-46a2e0cf9af6", "ai_explanation": "Fraudulent transaction based on significantly negative PCA scores (V1: -4.40, V10: -4.80)."} --profiles-dir .', 'profiles_dir': '.', 'static_parser': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'log_path': '/workspaces/modern-stack-banking/Transform/logs', 'fail_fast': 'False'}
+[0m16:44:49.804762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a9dd9ad9-39e5-4fc5-9b41-02607e4f52b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e2a26aa780>]}
+[0m16:44:49.875541 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a9dd9ad9-39e5-4fc5-9b41-02607e4f52b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e2a15ccd10>]}
+[0m16:44:49.877292 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m16:44:49.962453 [debug] [MainThread]: checksum: 423c9108391d130300c7cf083b11f5c9d3b287318e5693d84928d7e882f2b963, vars: {'ai_explanation': 'Fraudulent transaction based on significantly negative PCA '
+                   'scores (V1: -4.40, V10: -4.80).',
+ 'txn_id': '0b2ff67a-e912-49eb-89b6-46a2e0cf9af6'}, profile: , target: , version: 1.11.2
+[0m16:44:50.054873 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m16:44:50.055488 [debug] [MainThread]: previous checksum: 423c9108391d130300c7cf083b11f5c9d3b287318e5693d84928d7e882f2b963, current checksum: ce50d21f1c1aabe4bcdf1732e057561620373ce2af482804f75ff604ab4abc72
+[0m16:44:50.055980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a9dd9ad9-39e5-4fc5-9b41-02607e4f52b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e2959b9880>]}
+[0m16:44:51.294330 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'gold_fraud_analysis' in package 'modern_stack_banking'
+(models/Gold/schema.yml). Arguments to generic tests should be nested under the
+`arguments` property.
+[0m16:44:51.295017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'a9dd9ad9-39e5-4fc5-9b41-02607e4f52b6', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e2957721b0>]}
+[0m16:44:51.386407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a9dd9ad9-39e5-4fc5-9b41-02607e4f52b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e2957794c0>]}
+[0m16:44:51.455394 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/modern-stack-banking/Transform/target/manifest.json
+[0m16:44:51.457167 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/modern-stack-banking/Transform/target/semantic_manifest.json
+[0m16:44:51.469499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a9dd9ad9-39e5-4fc5-9b41-02607e4f52b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e294134290>]}
+[0m16:44:51.470074 [info ] [MainThread]: Found 5 models, 5 data tests, 472 macros
+[0m16:44:51.470544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a9dd9ad9-39e5-4fc5-9b41-02607e4f52b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e295785850>]}
+[0m16:44:51.472302 [info ] [MainThread]: 
+[0m16:44:51.472792 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:44:51.473257 [info ] [MainThread]: 
+[0m16:44:51.473866 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:44:51.474972 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_argus_vault'
+[0m16:44:51.510448 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault"
+[0m16:44:51.510964 [debug] [ThreadPool]: On list_argus_vault: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "list_argus_vault"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"argus_vault"'
+    
+  
+  
+[0m16:44:51.511417 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:44:51.600604 [debug] [ThreadPool]: SQL status: OK in 0.089 seconds
+[0m16:44:51.602330 [debug] [ThreadPool]: On list_argus_vault: Close
+[0m16:44:51.603207 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_argus_vault, now create_argus_vault_main)
+[0m16:44:51.603788 [debug] [ThreadPool]: Creating schema "database: "argus_vault"
+schema: "main"
+"
+[0m16:44:51.611192 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:44:51.611654 [debug] [ThreadPool]: On create_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "create_argus_vault_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='argus_vault'
+        and type='sqlite'
+    
+  
+[0m16:44:51.612094 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:44:51.613442 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:44:51.614741 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:44:51.615198 [debug] [ThreadPool]: On create_argus_vault_main: BEGIN
+[0m16:44:51.615805 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:44:51.616256 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:44:51.616671 [debug] [ThreadPool]: On create_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "create_argus_vault_main"} */
+
+    
+    
+        create schema if not exists "argus_vault"."main"
+    
+[0m16:44:51.617329 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:44:51.618252 [debug] [ThreadPool]: On create_argus_vault_main: COMMIT
+[0m16:44:51.618686 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m16:44:51.619112 [debug] [ThreadPool]: On create_argus_vault_main: COMMIT
+[0m16:44:51.619694 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:44:51.620152 [debug] [ThreadPool]: On create_argus_vault_main: Close
+[0m16:44:51.625709 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_argus_vault_main, now list_argus_vault_main)
+[0m16:44:51.631352 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault_main"
+[0m16:44:51.631883 [debug] [ThreadPool]: On list_argus_vault_main: BEGIN
+[0m16:44:51.632313 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:44:51.633439 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:44:51.633882 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault_main"
+[0m16:44:51.634340 [debug] [ThreadPool]: On list_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "list_argus_vault_main"} */
+select
+      'argus_vault' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'argus_vault'
+  
+[0m16:44:51.646350 [debug] [ThreadPool]: SQL status: OK in 0.012 seconds
+[0m16:44:51.647791 [debug] [ThreadPool]: On list_argus_vault_main: ROLLBACK
+[0m16:44:51.649070 [debug] [ThreadPool]: Failed to rollback 'list_argus_vault_main'
+[0m16:44:51.649512 [debug] [ThreadPool]: On list_argus_vault_main: Close
+[0m16:44:51.651041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a9dd9ad9-39e5-4fc5-9b41-02607e4f52b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e29406bd70>]}
+[0m16:44:51.651653 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:44:51.652101 [debug] [MainThread]: On master: BEGIN
+[0m16:44:51.652501 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:44:51.653370 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:44:51.653811 [debug] [MainThread]: On master: COMMIT
+[0m16:44:51.654257 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:44:51.654659 [debug] [MainThread]: On master: COMMIT
+[0m16:44:51.655347 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:44:51.655782 [debug] [MainThread]: On master: Close
+[0m16:44:51.657841 [debug] [Thread-1 (]: Began running node model.modern_stack_banking.sat_txn_ai_insights
+[0m16:44:51.658614 [info ] [Thread-1 (]: 1 of 1 START sql incremental model main.sat_txn_ai_insights .................... [RUN]
+[0m16:44:51.659246 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_argus_vault_main, now model.modern_stack_banking.sat_txn_ai_insights)
+[0m16:44:51.659724 [debug] [Thread-1 (]: Began compiling node model.modern_stack_banking.sat_txn_ai_insights
+[0m16:44:51.667769 [debug] [Thread-1 (]: Writing injected SQL for node "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:51.668526 [debug] [Thread-1 (]: Began executing node model.modern_stack_banking.sat_txn_ai_insights
+[0m16:44:51.724421 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:51.725005 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+    
+  
+    
+    
+
+    create temporary table
+      "sat_txn_ai_insights__dbt_tmp20260201164451700206"
+  
+    as (
+      
+
+-- This model acts as the landing zone for our Python AI script
+-- It grabs the specific transaction from the Hub and attaches the explanation passed via variables
+SELECT
+    h.txn_hash_key,
+    'Fraudulent transaction based on significantly negative PCA scores (V1: -4.40, V10: -4.80).' as ai_reason_for_flag,
+    CURRENT_TIMESTAMP as load_date,
+    'LLAMA3_OLLAMA_FORENSIC' as record_source
+FROM "argus_vault"."main"."hubs_transactions" h
+WHERE h.txn_id = '0b2ff67a-e912-49eb-89b6-46a2e0cf9af6'
+    );
+  
+  
+  
+[0m16:44:51.725499 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:44:51.733789 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m16:44:51.741838 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:51.742474 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: BEGIN
+[0m16:44:51.743304 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:44:51.743808 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:51.744336 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights__dbt_tmp20260201164451700206'
+      
+      
+      order by ordinal_position
+
+  
+[0m16:44:51.748084 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m16:44:51.755426 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:51.756025 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'argus_vault'
+      
+      order by ordinal_position
+
+  
+[0m16:44:51.760392 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m16:44:51.772130 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:51.772663 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'argus_vault'
+      
+      order by ordinal_position
+
+  
+[0m16:44:51.775598 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m16:44:51.777149 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:51.777652 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+SELECT version()
+[0m16:44:51.778462 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:44:51.794724 [debug] [Thread-1 (]: Writing runtime sql for node "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:51.795505 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:51.796016 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+
+    insert into "argus_vault"."main"."sat_txn_ai_insights" ("txn_hash_key", "ai_reason_for_flag", "load_date", "record_source")
+    (
+        select "txn_hash_key", "ai_reason_for_flag", "load_date", "record_source"
+        from "sat_txn_ai_insights__dbt_tmp20260201164451700206"
+    )
+  
+[0m16:44:51.797869 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:44:51.808355 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: COMMIT
+[0m16:44:51.808860 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m16:44:51.809381 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: COMMIT
+[0m16:44:51.824129 [debug] [Thread-1 (]: SQL status: OK in 0.014 seconds
+[0m16:44:51.826182 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: Close
+[0m16:44:51.827950 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a9dd9ad9-39e5-4fc5-9b41-02607e4f52b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e254cd4980>]}
+[0m16:44:51.829167 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model main.sat_txn_ai_insights ............... [[32mOK[0m in 0.17s]
+[0m16:44:51.830203 [debug] [Thread-1 (]: Finished running node model.modern_stack_banking.sat_txn_ai_insights
+[0m16:44:51.831797 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:44:51.832353 [debug] [MainThread]: On master: BEGIN
+[0m16:44:51.832817 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:44:51.833809 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:44:51.834269 [debug] [MainThread]: On master: COMMIT
+[0m16:44:51.834668 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:44:51.835084 [debug] [MainThread]: On master: COMMIT
+[0m16:44:51.835690 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:44:51.836142 [debug] [MainThread]: On master: Close
+[0m16:44:51.836618 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:44:51.837034 [debug] [MainThread]: Connection 'model.modern_stack_banking.sat_txn_ai_insights' was properly closed.
+[0m16:44:51.837446 [info ] [MainThread]: 
+[0m16:44:51.837881 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.36 seconds (0.36s).
+[0m16:44:51.838661 [debug] [MainThread]: Command end result
+[0m16:44:51.857500 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/modern-stack-banking/Transform/target/manifest.json
+[0m16:44:51.859127 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/modern-stack-banking/Transform/target/semantic_manifest.json
+[0m16:44:51.864712 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/modern-stack-banking/Transform/target/run_results.json
+[0m16:44:51.865176 [info ] [MainThread]: 
+[0m16:44:51.865691 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:44:51.866154 [info ] [MainThread]: 
+[0m16:44:51.866618 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:44:51.867259 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m16:44:51.868309 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.374693, "process_in_blocks": "0", "process_kernel_time": 0.30822, "process_mem_max_rss": "291040", "process_out_blocks": "3112", "process_user_time": 4.29631}
+[0m16:44:51.868890 [debug] [MainThread]: Command `dbt run` succeeded at 16:44:51.868786 after 2.38 seconds
+[0m16:44:51.869400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e2a5fcfd70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e2a199d220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79e2a15b3b00>]}
+[0m16:44:51.869881 [debug] [MainThread]: Flushing usage events
+[0m16:44:52.760370 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:10:28.231394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ae3ec2f080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ae3ec2efc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ae3ecc6e40>]}
+
+
+============================== 17:10:28.234758 | 0c46305a-3f9c-4392-a8c6-bc9e83d335d4 ==============================
+[0m17:10:28.234758 [info ] [MainThread]: Running with dbt=1.11.2
+[0m17:10:28.235475 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --select sat_txn_ai_insights --vars {"txn_id": "8ad558a6-50e8-4b5d-bb27-abd496a6e397", "ai_explanation": "Fraud detected: V7 and V17 values significantly higher than expected norms."} --profiles-dir .', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'partial_parse': 'True', 'fail_fast': 'False', 'warn_error': 'None', 'version_check': 'True', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'log_path': '/workspaces/modern-stack-banking/Transform/logs', 'profiles_dir': '.', 'empty': 'False', 'debug': 'False', 'printer_width': '80', 'quiet': 'False', 'no_print': 'None'}
+[0m17:10:28.482339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0c46305a-3f9c-4392-a8c6-bc9e83d335d4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ae3e321fa0>]}
+[0m17:10:28.554272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0c46305a-3f9c-4392-a8c6-bc9e83d335d4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ae3e22c0b0>]}
+[0m17:10:28.556147 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m17:10:28.640612 [debug] [MainThread]: checksum: 245383a282619d00ae374cc9abd1d9629147666434911eec239c44ff6347cfc4, vars: {'ai_explanation': 'Fraud detected: V7 and V17 values significantly higher '
+                   'than expected norms.',
+ 'txn_id': '8ad558a6-50e8-4b5d-bb27-abd496a6e397'}, profile: , target: , version: 1.11.2
+[0m17:10:28.733473 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m17:10:28.734116 [debug] [MainThread]: previous checksum: 245383a282619d00ae374cc9abd1d9629147666434911eec239c44ff6347cfc4, current checksum: 423c9108391d130300c7cf083b11f5c9d3b287318e5693d84928d7e882f2b963
+[0m17:10:28.734599 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '0c46305a-3f9c-4392-a8c6-bc9e83d335d4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ae3ec2eae0>]}
+[0m17:10:29.966971 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'gold_fraud_analysis' in package 'modern_stack_banking'
+(models/Gold/schema.yml). Arguments to generic tests should be nested under the
+`arguments` property.
+[0m17:10:29.967655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '0c46305a-3f9c-4392-a8c6-bc9e83d335d4', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ae3016b080>]}
+[0m17:10:30.060113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0c46305a-3f9c-4392-a8c6-bc9e83d335d4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ae32487ec0>]}
+[0m17:10:30.130127 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/modern-stack-banking/Transform/target/manifest.json
+[0m17:10:30.131939 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/modern-stack-banking/Transform/target/semantic_manifest.json
+[0m17:10:30.144346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0c46305a-3f9c-4392-a8c6-bc9e83d335d4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79adf201f3b0>]}
+[0m17:10:30.144901 [info ] [MainThread]: Found 5 models, 5 data tests, 472 macros
+[0m17:10:30.145407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0c46305a-3f9c-4392-a8c6-bc9e83d335d4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79adf21ce5a0>]}
+[0m17:10:30.147176 [info ] [MainThread]: 
+[0m17:10:30.147673 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:10:30.148134 [info ] [MainThread]: 
+[0m17:10:30.148756 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:10:30.149858 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_argus_vault'
+[0m17:10:30.186450 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault"
+[0m17:10:30.187027 [debug] [ThreadPool]: On list_argus_vault: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "list_argus_vault"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"argus_vault"'
+    
+  
+  
+[0m17:10:30.187470 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:10:30.275685 [debug] [ThreadPool]: SQL status: OK in 0.088 seconds
+[0m17:10:30.277416 [debug] [ThreadPool]: On list_argus_vault: Close
+[0m17:10:30.278294 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_argus_vault, now create_argus_vault_main)
+[0m17:10:30.278880 [debug] [ThreadPool]: Creating schema "database: "argus_vault"
+schema: "main"
+"
+[0m17:10:30.286373 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m17:10:30.286846 [debug] [ThreadPool]: On create_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "create_argus_vault_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='argus_vault'
+        and type='sqlite'
+    
+  
+[0m17:10:30.287304 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:10:30.289032 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:10:30.290376 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m17:10:30.290817 [debug] [ThreadPool]: On create_argus_vault_main: BEGIN
+[0m17:10:30.291468 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:10:30.291893 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m17:10:30.292357 [debug] [ThreadPool]: On create_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "create_argus_vault_main"} */
+
+    
+    
+        create schema if not exists "argus_vault"."main"
+    
+[0m17:10:30.293021 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:10:30.293963 [debug] [ThreadPool]: On create_argus_vault_main: COMMIT
+[0m17:10:30.294408 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m17:10:30.294829 [debug] [ThreadPool]: On create_argus_vault_main: COMMIT
+[0m17:10:30.295465 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:10:30.295905 [debug] [ThreadPool]: On create_argus_vault_main: Close
+[0m17:10:30.301683 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_argus_vault_main, now list_argus_vault_main)
+[0m17:10:30.307680 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault_main"
+[0m17:10:30.308254 [debug] [ThreadPool]: On list_argus_vault_main: BEGIN
+[0m17:10:30.308673 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:10:30.309587 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:10:30.310292 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault_main"
+[0m17:10:30.311071 [debug] [ThreadPool]: On list_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "list_argus_vault_main"} */
+select
+      'argus_vault' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'argus_vault'
+  
+[0m17:10:30.324168 [debug] [ThreadPool]: SQL status: OK in 0.012 seconds
+[0m17:10:30.326084 [debug] [ThreadPool]: On list_argus_vault_main: ROLLBACK
+[0m17:10:30.327515 [debug] [ThreadPool]: Failed to rollback 'list_argus_vault_main'
+[0m17:10:30.328140 [debug] [ThreadPool]: On list_argus_vault_main: Close
+[0m17:10:30.329992 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0c46305a-3f9c-4392-a8c6-bc9e83d335d4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79adf21eb500>]}
+[0m17:10:30.330680 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:10:30.331226 [debug] [MainThread]: On master: BEGIN
+[0m17:10:30.331785 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:10:30.332865 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:10:30.333344 [debug] [MainThread]: On master: COMMIT
+[0m17:10:30.333770 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:10:30.334206 [debug] [MainThread]: On master: COMMIT
+[0m17:10:30.334822 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:10:30.335284 [debug] [MainThread]: On master: Close
+[0m17:10:30.337348 [debug] [Thread-1 (]: Began running node model.modern_stack_banking.sat_txn_ai_insights
+[0m17:10:30.338150 [info ] [Thread-1 (]: 1 of 1 START sql incremental model main.sat_txn_ai_insights .................... [RUN]
+[0m17:10:30.338774 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_argus_vault_main, now model.modern_stack_banking.sat_txn_ai_insights)
+[0m17:10:30.339305 [debug] [Thread-1 (]: Began compiling node model.modern_stack_banking.sat_txn_ai_insights
+[0m17:10:30.347615 [debug] [Thread-1 (]: Writing injected SQL for node "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:30.348367 [debug] [Thread-1 (]: Began executing node model.modern_stack_banking.sat_txn_ai_insights
+[0m17:10:30.405217 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:30.405817 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+    
+  
+    
+    
+
+    create temporary table
+      "sat_txn_ai_insights__dbt_tmp20260201171030380626"
+  
+    as (
+      
+
+-- This model acts as the landing zone for our Python AI script
+-- It grabs the specific transaction from the Hub and attaches the explanation passed via variables
+SELECT
+    h.txn_hash_key,
+    'Fraud detected: V7 and V17 values significantly higher than expected norms.' as ai_reason_for_flag,
+    CURRENT_TIMESTAMP as load_date,
+    'LLAMA3_OLLAMA_FORENSIC' as record_source
+FROM "argus_vault"."main"."hubs_transactions" h
+WHERE h.txn_id = '8ad558a6-50e8-4b5d-bb27-abd496a6e397'
+    );
+  
+  
+  
+[0m17:10:30.406351 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:10:30.415300 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m17:10:30.422986 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:30.423513 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: BEGIN
+[0m17:10:30.424242 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:10:30.424729 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:30.425260 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights__dbt_tmp20260201171030380626'
+      
+      
+      order by ordinal_position
+
+  
+[0m17:10:30.428034 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m17:10:30.433398 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:30.433950 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'argus_vault'
+      
+      order by ordinal_position
+
+  
+[0m17:10:30.436820 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m17:10:30.447279 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:30.447810 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'argus_vault'
+      
+      order by ordinal_position
+
+  
+[0m17:10:30.450302 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m17:10:30.451842 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:30.452373 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+SELECT version()
+[0m17:10:30.453153 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:10:30.469624 [debug] [Thread-1 (]: Writing runtime sql for node "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:30.470412 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:30.470943 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+
+    insert into "argus_vault"."main"."sat_txn_ai_insights" ("txn_hash_key", "ai_reason_for_flag", "load_date", "record_source")
+    (
+        select "txn_hash_key", "ai_reason_for_flag", "load_date", "record_source"
+        from "sat_txn_ai_insights__dbt_tmp20260201171030380626"
+    )
+  
+[0m17:10:30.472293 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:10:30.482669 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: COMMIT
+[0m17:10:30.483215 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:30.483693 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: COMMIT
+[0m17:10:30.486901 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m17:10:30.488869 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: Close
+[0m17:10:30.490619 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c46305a-3f9c-4392-a8c6-bc9e83d335d4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ae30124620>]}
+[0m17:10:30.491405 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model main.sat_txn_ai_insights ............... [[32mOK[0m in 0.15s]
+[0m17:10:30.492141 [debug] [Thread-1 (]: Finished running node model.modern_stack_banking.sat_txn_ai_insights
+[0m17:10:30.493887 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:10:30.494495 [debug] [MainThread]: On master: BEGIN
+[0m17:10:30.494995 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:10:30.495949 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:10:30.496517 [debug] [MainThread]: On master: COMMIT
+[0m17:10:30.497071 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:10:30.497587 [debug] [MainThread]: On master: COMMIT
+[0m17:10:30.498255 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:10:30.498696 [debug] [MainThread]: On master: Close
+[0m17:10:30.499219 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:10:30.499625 [debug] [MainThread]: Connection 'model.modern_stack_banking.sat_txn_ai_insights' was properly closed.
+[0m17:10:30.500072 [info ] [MainThread]: 
+[0m17:10:30.500525 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.35 seconds (0.35s).
+[0m17:10:30.501314 [debug] [MainThread]: Command end result
+[0m17:10:30.520475 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/modern-stack-banking/Transform/target/manifest.json
+[0m17:10:30.522124 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/modern-stack-banking/Transform/target/semantic_manifest.json
+[0m17:10:30.527781 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/modern-stack-banking/Transform/target/run_results.json
+[0m17:10:30.528248 [info ] [MainThread]: 
+[0m17:10:30.528769 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:10:30.529240 [info ] [MainThread]: 
+[0m17:10:30.529707 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m17:10:30.530347 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m17:10:30.531388 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.3623025, "process_in_blocks": "0", "process_kernel_time": 0.316425, "process_mem_max_rss": "277072", "process_out_blocks": "3104", "process_user_time": 4.290099}
+[0m17:10:30.531999 [debug] [MainThread]: Command `dbt run` succeeded at 17:10:30.531872 after 2.36 seconds
+[0m17:10:30.532476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ae3e3dd940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ae3e2df200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ae3e2dc830>]}
+[0m17:10:30.532977 [debug] [MainThread]: Flushing usage events
+[0m17:10:31.519170 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:10:47.272220 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e2f9f3230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e2f2fd880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e2f2fea50>]}
+
+
+============================== 17:10:47.275687 | 9d2e2ab1-99d6-460f-8eb9-300dc49ee942 ==============================
+[0m17:10:47.275687 [info ] [MainThread]: Running with dbt=1.11.2
+[0m17:10:47.276372 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'target_path': 'None', 'warn_error': 'None', 'cache_selected_only': 'False', 'log_path': '/workspaces/modern-stack-banking/Transform/logs', 'debug': 'False', 'use_experimental_parser': 'False', 'quiet': 'False', 'invocation_command': 'dbt run --select sat_txn_ai_insights --vars {"txn_id": "829bd17a-c64c-49a1-b100-c9fb9e8e8145", "ai_explanation": "This transaction is fraud based on anomalous PCA factors exceeding 2x standard deviations."} --profiles-dir .', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'static_parser': 'True', 'no_print': 'None', 'printer_width': '80', 'empty': 'False', 'write_json': 'True', 'profiles_dir': '.', 'introspect': 'True', 'version_check': 'True'}
+[0m17:10:47.525965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9d2e2ab1-99d6-460f-8eb9-300dc49ee942', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e2ef8ff80>]}
+[0m17:10:47.597246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9d2e2ab1-99d6-460f-8eb9-300dc49ee942', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e2f686060>]}
+[0m17:10:47.599025 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m17:10:47.682832 [debug] [MainThread]: checksum: b917e49a4aee5352fe649d6cfff8946dcbb4532cd7a4d6115270de0efc8710c0, vars: {'ai_explanation': 'This transaction is fraud based on anomalous PCA factors '
+                   'exceeding 2x standard deviations.',
+ 'txn_id': '829bd17a-c64c-49a1-b100-c9fb9e8e8145'}, profile: , target: , version: 1.11.2
+[0m17:10:47.775113 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m17:10:47.775711 [debug] [MainThread]: previous checksum: b917e49a4aee5352fe649d6cfff8946dcbb4532cd7a4d6115270de0efc8710c0, current checksum: 245383a282619d00ae374cc9abd1d9629147666434911eec239c44ff6347cfc4
+[0m17:10:47.776218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9d2e2ab1-99d6-460f-8eb9-300dc49ee942', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e2f9f2ab0>]}
+[0m17:10:49.017691 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'gold_fraud_analysis' in package 'modern_stack_banking'
+(models/Gold/schema.yml). Arguments to generic tests should be nested under the
+`arguments` property.
+[0m17:10:49.018395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9d2e2ab1-99d6-460f-8eb9-300dc49ee942', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e20176db0>]}
+[0m17:10:49.110118 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9d2e2ab1-99d6-460f-8eb9-300dc49ee942', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e0aefc470>]}
+[0m17:10:49.178655 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/modern-stack-banking/Transform/target/manifest.json
+[0m17:10:49.180379 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/modern-stack-banking/Transform/target/semantic_manifest.json
+[0m17:10:49.192588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9d2e2ab1-99d6-460f-8eb9-300dc49ee942', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e0aefd520>]}
+[0m17:10:49.193173 [info ] [MainThread]: Found 5 models, 5 data tests, 472 macros
+[0m17:10:49.193640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9d2e2ab1-99d6-460f-8eb9-300dc49ee942', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e0afc4a40>]}
+[0m17:10:49.195405 [info ] [MainThread]: 
+[0m17:10:49.195898 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:10:49.196358 [info ] [MainThread]: 
+[0m17:10:49.196973 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:10:49.198037 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_argus_vault'
+[0m17:10:49.233348 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault"
+[0m17:10:49.233846 [debug] [ThreadPool]: On list_argus_vault: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "list_argus_vault"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"argus_vault"'
+    
+  
+  
+[0m17:10:49.234331 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:10:49.319824 [debug] [ThreadPool]: SQL status: OK in 0.085 seconds
+[0m17:10:49.321601 [debug] [ThreadPool]: On list_argus_vault: Close
+[0m17:10:49.322575 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_argus_vault, now create_argus_vault_main)
+[0m17:10:49.323219 [debug] [ThreadPool]: Creating schema "database: "argus_vault"
+schema: "main"
+"
+[0m17:10:49.331140 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m17:10:49.331617 [debug] [ThreadPool]: On create_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "create_argus_vault_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='argus_vault'
+        and type='sqlite'
+    
+  
+[0m17:10:49.332069 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:10:49.333813 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:10:49.335230 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m17:10:49.335670 [debug] [ThreadPool]: On create_argus_vault_main: BEGIN
+[0m17:10:49.336342 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:10:49.336770 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m17:10:49.337212 [debug] [ThreadPool]: On create_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "create_argus_vault_main"} */
+
+    
+    
+        create schema if not exists "argus_vault"."main"
+    
+[0m17:10:49.337889 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:10:49.338845 [debug] [ThreadPool]: On create_argus_vault_main: COMMIT
+[0m17:10:49.339321 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m17:10:49.339738 [debug] [ThreadPool]: On create_argus_vault_main: COMMIT
+[0m17:10:49.340375 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:10:49.340817 [debug] [ThreadPool]: On create_argus_vault_main: Close
+[0m17:10:49.346581 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_argus_vault_main, now list_argus_vault_main)
+[0m17:10:49.352608 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault_main"
+[0m17:10:49.353168 [debug] [ThreadPool]: On list_argus_vault_main: BEGIN
+[0m17:10:49.353576 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:10:49.354498 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:10:49.354955 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault_main"
+[0m17:10:49.355384 [debug] [ThreadPool]: On list_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "list_argus_vault_main"} */
+select
+      'argus_vault' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'argus_vault'
+  
+[0m17:10:49.366465 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m17:10:49.367953 [debug] [ThreadPool]: On list_argus_vault_main: ROLLBACK
+[0m17:10:49.369229 [debug] [ThreadPool]: Failed to rollback 'list_argus_vault_main'
+[0m17:10:49.369676 [debug] [ThreadPool]: On list_argus_vault_main: Close
+[0m17:10:49.371361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9d2e2ab1-99d6-460f-8eb9-300dc49ee942', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e0ae27d70>]}
+[0m17:10:49.371997 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:10:49.372439 [debug] [MainThread]: On master: BEGIN
+[0m17:10:49.372845 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:10:49.373816 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:10:49.374292 [debug] [MainThread]: On master: COMMIT
+[0m17:10:49.374709 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:10:49.375132 [debug] [MainThread]: On master: COMMIT
+[0m17:10:49.375722 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:10:49.376179 [debug] [MainThread]: On master: Close
+[0m17:10:49.378197 [debug] [Thread-1 (]: Began running node model.modern_stack_banking.sat_txn_ai_insights
+[0m17:10:49.378834 [info ] [Thread-1 (]: 1 of 1 START sql incremental model main.sat_txn_ai_insights .................... [RUN]
+[0m17:10:49.379420 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_argus_vault_main, now model.modern_stack_banking.sat_txn_ai_insights)
+[0m17:10:49.379930 [debug] [Thread-1 (]: Began compiling node model.modern_stack_banking.sat_txn_ai_insights
+[0m17:10:49.388058 [debug] [Thread-1 (]: Writing injected SQL for node "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:49.388801 [debug] [Thread-1 (]: Began executing node model.modern_stack_banking.sat_txn_ai_insights
+[0m17:10:49.445767 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:49.446364 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+    
+  
+    
+    
+
+    create temporary table
+      "sat_txn_ai_insights__dbt_tmp20260201171049421143"
+  
+    as (
+      
+
+-- This model acts as the landing zone for our Python AI script
+-- It grabs the specific transaction from the Hub and attaches the explanation passed via variables
+SELECT
+    h.txn_hash_key,
+    'This transaction is fraud based on anomalous PCA factors exceeding 2x standard deviations.' as ai_reason_for_flag,
+    CURRENT_TIMESTAMP as load_date,
+    'LLAMA3_OLLAMA_FORENSIC' as record_source
+FROM "argus_vault"."main"."hubs_transactions" h
+WHERE h.txn_id = '829bd17a-c64c-49a1-b100-c9fb9e8e8145'
+    );
+  
+  
+  
+[0m17:10:49.446868 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:10:49.455239 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m17:10:49.462799 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:49.463335 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: BEGIN
+[0m17:10:49.464053 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:10:49.464547 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:49.465048 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights__dbt_tmp20260201171049421143'
+      
+      
+      order by ordinal_position
+
+  
+[0m17:10:49.467734 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m17:10:49.472773 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:49.473323 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'argus_vault'
+      
+      order by ordinal_position
+
+  
+[0m17:10:49.476801 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m17:10:49.486956 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:49.487486 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'argus_vault'
+      
+      order by ordinal_position
+
+  
+[0m17:10:49.490146 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m17:10:49.491662 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:49.492201 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+SELECT version()
+[0m17:10:49.492999 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:10:49.509387 [debug] [Thread-1 (]: Writing runtime sql for node "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:49.510200 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:49.510717 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+
+    insert into "argus_vault"."main"."sat_txn_ai_insights" ("txn_hash_key", "ai_reason_for_flag", "load_date", "record_source")
+    (
+        select "txn_hash_key", "ai_reason_for_flag", "load_date", "record_source"
+        from "sat_txn_ai_insights__dbt_tmp20260201171049421143"
+    )
+  
+[0m17:10:49.512009 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:10:49.522422 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: COMMIT
+[0m17:10:49.523015 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:10:49.523491 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: COMMIT
+[0m17:10:49.538224 [debug] [Thread-1 (]: SQL status: OK in 0.014 seconds
+[0m17:10:49.540376 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: Close
+[0m17:10:49.542149 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9d2e2ab1-99d6-460f-8eb9-300dc49ee942', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e31c84e90>]}
+[0m17:10:49.542928 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model main.sat_txn_ai_insights ............... [[32mOK[0m in 0.16s]
+[0m17:10:49.543646 [debug] [Thread-1 (]: Finished running node model.modern_stack_banking.sat_txn_ai_insights
+[0m17:10:49.545163 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:10:49.545712 [debug] [MainThread]: On master: BEGIN
+[0m17:10:49.546222 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:10:49.547304 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:10:49.547760 [debug] [MainThread]: On master: COMMIT
+[0m17:10:49.548209 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:10:49.548614 [debug] [MainThread]: On master: COMMIT
+[0m17:10:49.549242 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:10:49.549678 [debug] [MainThread]: On master: Close
+[0m17:10:49.550204 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:10:49.550608 [debug] [MainThread]: Connection 'model.modern_stack_banking.sat_txn_ai_insights' was properly closed.
+[0m17:10:49.551054 [info ] [MainThread]: 
+[0m17:10:49.551504 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.35 seconds (0.35s).
+[0m17:10:49.552277 [debug] [MainThread]: Command end result
+[0m17:10:49.571194 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/modern-stack-banking/Transform/target/manifest.json
+[0m17:10:49.572977 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/modern-stack-banking/Transform/target/semantic_manifest.json
+[0m17:10:49.578691 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/modern-stack-banking/Transform/target/run_results.json
+[0m17:10:49.579168 [info ] [MainThread]: 
+[0m17:10:49.579699 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:10:49.580168 [info ] [MainThread]: 
+[0m17:10:49.580637 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m17:10:49.581291 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m17:10:49.582330 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.3725371, "process_in_blocks": "0", "process_kernel_time": 0.325678, "process_mem_max_rss": "278800", "process_out_blocks": "3104", "process_user_time": 4.27837}
+[0m17:10:49.582940 [debug] [MainThread]: Command `dbt run` succeeded at 17:10:49.582816 after 2.37 seconds
+[0m17:10:49.583445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e300d23c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e300d3830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b2e300d0a40>]}
+[0m17:10:49.583962 [debug] [MainThread]: Flushing usage events
+[0m17:10:50.470715 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:11:05.614531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256fdc083e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256fd30ff20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256fdf1f0e0>]}
+
+
+============================== 17:11:05.618726 | e9d53757-0244-46d8-8d32-2b698a349d60 ==============================
+[0m17:11:05.618726 [info ] [MainThread]: Running with dbt=1.11.2
+[0m17:11:05.619688 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'use_colors': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'no_print': 'None', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'printer_width': '80', 'debug': 'False', 'profiles_dir': '.', 'fail_fast': 'False', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --select sat_txn_ai_insights --vars {"txn_id": "393d0456-b718-4cbb-9475-8203b721cd1b", "ai_explanation": "Highly anomalous PCA scores across multiple factors indicate fraudulent transaction."} --profiles-dir .', 'write_json': 'True', 'indirect_selection': 'eager', 'log_path': '/workspaces/modern-stack-banking/Transform/logs', 'version_check': 'True', 'cache_selected_only': 'False', 'quiet': 'False'}
+[0m17:11:05.867372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e9d53757-0244-46d8-8d32-2b698a349d60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256fd35fec0>]}
+[0m17:11:05.938159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e9d53757-0244-46d8-8d32-2b698a349d60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256fda43170>]}
+[0m17:11:05.939934 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m17:11:06.023373 [debug] [MainThread]: checksum: 50ccc20daa05df1faaa26a50c692d26c21867446666fa0d00f79106134670745, vars: {'ai_explanation': 'Highly anomalous PCA scores across multiple factors '
+                   'indicate fraudulent transaction.',
+ 'txn_id': '393d0456-b718-4cbb-9475-8203b721cd1b'}, profile: , target: , version: 1.11.2
+[0m17:11:06.115453 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m17:11:06.116110 [debug] [MainThread]: previous checksum: 50ccc20daa05df1faaa26a50c692d26c21867446666fa0d00f79106134670745, current checksum: b917e49a4aee5352fe649d6cfff8946dcbb4532cd7a4d6115270de0efc8710c0
+[0m17:11:06.116577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e9d53757-0244-46d8-8d32-2b698a349d60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256f14ae540>]}
+[0m17:11:07.350603 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'gold_fraud_analysis' in package 'modern_stack_banking'
+(models/Gold/schema.yml). Arguments to generic tests should be nested under the
+`arguments` property.
+[0m17:11:07.351318 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'e9d53757-0244-46d8-8d32-2b698a349d60', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256fd20be60>]}
+[0m17:11:07.443369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e9d53757-0244-46d8-8d32-2b698a349d60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256f1752240>]}
+[0m17:11:07.513196 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/modern-stack-banking/Transform/target/manifest.json
+[0m17:11:07.515001 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/modern-stack-banking/Transform/target/semantic_manifest.json
+[0m17:11:07.527369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e9d53757-0244-46d8-8d32-2b698a349d60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256f0019760>]}
+[0m17:11:07.527957 [info ] [MainThread]: Found 5 models, 5 data tests, 472 macros
+[0m17:11:07.528436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e9d53757-0244-46d8-8d32-2b698a349d60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256f00e6480>]}
+[0m17:11:07.530189 [info ] [MainThread]: 
+[0m17:11:07.530687 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:11:07.531149 [info ] [MainThread]: 
+[0m17:11:07.531756 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:11:07.532759 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_argus_vault'
+[0m17:11:07.568493 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault"
+[0m17:11:07.568994 [debug] [ThreadPool]: On list_argus_vault: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "list_argus_vault"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"argus_vault"'
+    
+  
+  
+[0m17:11:07.569448 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:11:07.657590 [debug] [ThreadPool]: SQL status: OK in 0.088 seconds
+[0m17:11:07.659289 [debug] [ThreadPool]: On list_argus_vault: Close
+[0m17:11:07.660178 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_argus_vault, now create_argus_vault_main)
+[0m17:11:07.660761 [debug] [ThreadPool]: Creating schema "database: "argus_vault"
+schema: "main"
+"
+[0m17:11:07.668072 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m17:11:07.668535 [debug] [ThreadPool]: On create_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "create_argus_vault_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='argus_vault'
+        and type='sqlite'
+    
+  
+[0m17:11:07.668973 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:11:07.670409 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:11:07.671729 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m17:11:07.672193 [debug] [ThreadPool]: On create_argus_vault_main: BEGIN
+[0m17:11:07.672786 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:11:07.673233 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m17:11:07.673641 [debug] [ThreadPool]: On create_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "create_argus_vault_main"} */
+
+    
+    
+        create schema if not exists "argus_vault"."main"
+    
+[0m17:11:07.674293 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:11:07.675220 [debug] [ThreadPool]: On create_argus_vault_main: COMMIT
+[0m17:11:07.675675 [debug] [ThreadPool]: Using duckdb connection "create_argus_vault_main"
+[0m17:11:07.676117 [debug] [ThreadPool]: On create_argus_vault_main: COMMIT
+[0m17:11:07.676755 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:11:07.677228 [debug] [ThreadPool]: On create_argus_vault_main: Close
+[0m17:11:07.682833 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_argus_vault_main, now list_argus_vault_main)
+[0m17:11:07.688976 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault_main"
+[0m17:11:07.689519 [debug] [ThreadPool]: On list_argus_vault_main: BEGIN
+[0m17:11:07.689951 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:11:07.691217 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:11:07.691657 [debug] [ThreadPool]: Using duckdb connection "list_argus_vault_main"
+[0m17:11:07.692123 [debug] [ThreadPool]: On list_argus_vault_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "connection_name": "list_argus_vault_main"} */
+select
+      'argus_vault' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'argus_vault'
+  
+[0m17:11:07.703326 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m17:11:07.704799 [debug] [ThreadPool]: On list_argus_vault_main: ROLLBACK
+[0m17:11:07.706106 [debug] [ThreadPool]: Failed to rollback 'list_argus_vault_main'
+[0m17:11:07.706553 [debug] [ThreadPool]: On list_argus_vault_main: Close
+[0m17:11:07.708194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e9d53757-0244-46d8-8d32-2b698a349d60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256f00d6a80>]}
+[0m17:11:07.708830 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:11:07.709288 [debug] [MainThread]: On master: BEGIN
+[0m17:11:07.709695 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:11:07.710572 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:11:07.711041 [debug] [MainThread]: On master: COMMIT
+[0m17:11:07.711461 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:11:07.711867 [debug] [MainThread]: On master: COMMIT
+[0m17:11:07.712482 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:11:07.712929 [debug] [MainThread]: On master: Close
+[0m17:11:07.715015 [debug] [Thread-1 (]: Began running node model.modern_stack_banking.sat_txn_ai_insights
+[0m17:11:07.715643 [info ] [Thread-1 (]: 1 of 1 START sql incremental model main.sat_txn_ai_insights .................... [RUN]
+[0m17:11:07.716402 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_argus_vault_main, now model.modern_stack_banking.sat_txn_ai_insights)
+[0m17:11:07.716932 [debug] [Thread-1 (]: Began compiling node model.modern_stack_banking.sat_txn_ai_insights
+[0m17:11:07.724994 [debug] [Thread-1 (]: Writing injected SQL for node "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:11:07.725710 [debug] [Thread-1 (]: Began executing node model.modern_stack_banking.sat_txn_ai_insights
+[0m17:11:07.783106 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:11:07.783655 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+    
+  
+    
+    
+
+    create temporary table
+      "sat_txn_ai_insights__dbt_tmp20260201171107758436"
+  
+    as (
+      
+
+-- This model acts as the landing zone for our Python AI script
+-- It grabs the specific transaction from the Hub and attaches the explanation passed via variables
+SELECT
+    h.txn_hash_key,
+    'Highly anomalous PCA scores across multiple factors indicate fraudulent transaction.' as ai_reason_for_flag,
+    CURRENT_TIMESTAMP as load_date,
+    'LLAMA3_OLLAMA_FORENSIC' as record_source
+FROM "argus_vault"."main"."hubs_transactions" h
+WHERE h.txn_id = '393d0456-b718-4cbb-9475-8203b721cd1b'
+    );
+  
+  
+  
+[0m17:11:07.784175 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:11:07.792277 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m17:11:07.799986 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:11:07.800494 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: BEGIN
+[0m17:11:07.801202 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:11:07.801684 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:11:07.802174 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights__dbt_tmp20260201171107758436'
+      
+      
+      order by ordinal_position
+
+  
+[0m17:11:07.805328 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m17:11:07.810384 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:11:07.810900 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'argus_vault'
+      
+      order by ordinal_position
+
+  
+[0m17:11:07.813424 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m17:11:07.823522 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:11:07.824073 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'sat_txn_ai_insights'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'argus_vault'
+      
+      order by ordinal_position
+
+  
+[0m17:11:07.826708 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m17:11:07.828235 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:11:07.828742 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+SELECT version()
+[0m17:11:07.829572 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:11:07.845855 [debug] [Thread-1 (]: Writing runtime sql for node "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:11:07.846657 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:11:07.847178 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "modern_stack_banking", "target_name": "dev", "node_id": "model.modern_stack_banking.sat_txn_ai_insights"} */
+
+
+    insert into "argus_vault"."main"."sat_txn_ai_insights" ("txn_hash_key", "ai_reason_for_flag", "load_date", "record_source")
+    (
+        select "txn_hash_key", "ai_reason_for_flag", "load_date", "record_source"
+        from "sat_txn_ai_insights__dbt_tmp20260201171107758436"
+    )
+  
+[0m17:11:07.848350 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:11:07.858817 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: COMMIT
+[0m17:11:07.859356 [debug] [Thread-1 (]: Using duckdb connection "model.modern_stack_banking.sat_txn_ai_insights"
+[0m17:11:07.859821 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: COMMIT
+[0m17:11:07.874199 [debug] [Thread-1 (]: SQL status: OK in 0.014 seconds
+[0m17:11:07.876266 [debug] [Thread-1 (]: On model.modern_stack_banking.sat_txn_ai_insights: Close
+[0m17:11:07.878015 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e9d53757-0244-46d8-8d32-2b698a349d60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256f14505c0>]}
+[0m17:11:07.878768 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model main.sat_txn_ai_insights ............... [[32mOK[0m in 0.16s]
+[0m17:11:07.879510 [debug] [Thread-1 (]: Finished running node model.modern_stack_banking.sat_txn_ai_insights
+[0m17:11:07.880956 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:11:07.881491 [debug] [MainThread]: On master: BEGIN
+[0m17:11:07.881986 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:11:07.882928 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:11:07.883392 [debug] [MainThread]: On master: COMMIT
+[0m17:11:07.883814 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:11:07.884248 [debug] [MainThread]: On master: COMMIT
+[0m17:11:07.884822 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:11:07.885282 [debug] [MainThread]: On master: Close
+[0m17:11:07.885777 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:11:07.886198 [debug] [MainThread]: Connection 'model.modern_stack_banking.sat_txn_ai_insights' was properly closed.
+[0m17:11:07.886616 [info ] [MainThread]: 
+[0m17:11:07.887095 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.36 seconds (0.36s).
+[0m17:11:07.887852 [debug] [MainThread]: Command end result
+[0m17:11:07.906701 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/modern-stack-banking/Transform/target/manifest.json
+[0m17:11:07.908367 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/modern-stack-banking/Transform/target/semantic_manifest.json
+[0m17:11:07.914016 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/modern-stack-banking/Transform/target/run_results.json
+[0m17:11:07.914457 [info ] [MainThread]: 
+[0m17:11:07.914986 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:11:07.915430 [info ] [MainThread]: 
+[0m17:11:07.915907 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m17:11:07.916545 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m17:11:07.917585 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.3672693, "process_in_blocks": "0", "process_kernel_time": 0.321537, "process_mem_max_rss": "275124", "process_out_blocks": "3104", "process_user_time": 4.27199}
+[0m17:11:07.918195 [debug] [MainThread]: Command `dbt run` succeeded at 17:11:07.918084 after 2.37 seconds
+[0m17:11:07.918666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256fd2ed880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256fd2089e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7256f132d5e0>]}
+[0m17:11:07.919167 [debug] [MainThread]: Flushing usage events
+[0m17:11:08.900489 [debug] [MainThread]: An error was encountered while trying to flush usage events
